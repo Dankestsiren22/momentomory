@@ -109,6 +109,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Parry/Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""edff4081-218a-40f5-8c17-837c52db347d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause/Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcfcf59d-2796-4d2d-8d11-f908c53d1812"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -177,6 +195,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Turning/LR_Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c0b025b-7b29-4b5b-a168-feb2dfc909f4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Parry/Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b4b094c-2b7b-4d2d-8a17-53ecabe9c7a4"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause/Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,6 +227,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_UDFB_Movement = m_Player.FindAction("UD/FB_Movement", throwIfNotFound: true);
         m_Player_TurningLR_Movement = m_Player.FindAction("Turning/LR_Movement", throwIfNotFound: true);
+        m_Player_ParrySelect = m_Player.FindAction("Parry/Select", throwIfNotFound: true);
+        m_Player_PauseInventory = m_Player.FindAction("Pause/Inventory", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -269,6 +311,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_UDFB_Movement;
     private readonly InputAction m_Player_TurningLR_Movement;
+    private readonly InputAction m_Player_ParrySelect;
+    private readonly InputAction m_Player_PauseInventory;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -288,6 +332,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/TurningLR_Movement".
         /// </summary>
         public InputAction @TurningLR_Movement => m_Wrapper.m_Player_TurningLR_Movement;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ParrySelect".
+        /// </summary>
+        public InputAction @ParrySelect => m_Wrapper.m_Player_ParrySelect;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/PauseInventory".
+        /// </summary>
+        public InputAction @PauseInventory => m_Wrapper.m_Player_PauseInventory;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -320,6 +372,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @TurningLR_Movement.started += instance.OnTurningLR_Movement;
             @TurningLR_Movement.performed += instance.OnTurningLR_Movement;
             @TurningLR_Movement.canceled += instance.OnTurningLR_Movement;
+            @ParrySelect.started += instance.OnParrySelect;
+            @ParrySelect.performed += instance.OnParrySelect;
+            @ParrySelect.canceled += instance.OnParrySelect;
+            @PauseInventory.started += instance.OnPauseInventory;
+            @PauseInventory.performed += instance.OnPauseInventory;
+            @PauseInventory.canceled += instance.OnPauseInventory;
         }
 
         /// <summary>
@@ -337,6 +395,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @TurningLR_Movement.started -= instance.OnTurningLR_Movement;
             @TurningLR_Movement.performed -= instance.OnTurningLR_Movement;
             @TurningLR_Movement.canceled -= instance.OnTurningLR_Movement;
+            @ParrySelect.started -= instance.OnParrySelect;
+            @ParrySelect.performed -= instance.OnParrySelect;
+            @ParrySelect.canceled -= instance.OnParrySelect;
+            @PauseInventory.started -= instance.OnPauseInventory;
+            @PauseInventory.performed -= instance.OnPauseInventory;
+            @PauseInventory.canceled -= instance.OnPauseInventory;
         }
 
         /// <summary>
@@ -391,5 +455,19 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTurningLR_Movement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Parry/Select" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnParrySelect(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pause/Inventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPauseInventory(InputAction.CallbackContext context);
     }
 }
