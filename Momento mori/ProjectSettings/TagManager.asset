@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ActiveParry
   - ParryableAttack
+  - Explosin
   layers:
   - Default
   - TransparentFX
