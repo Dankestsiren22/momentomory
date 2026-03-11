@@ -18,7 +18,7 @@ public class ParryBoss : MonoBehaviour
     {
         if (CanParryBall == true)
         {
-            GameObject p = Instantiate(ParryBall);
+            GameObject p = Instantiate(ParryBall, transform.position, transform.rotation);
             Destroy(p, 7f);
             CanParryBall = false;
             StartCoroutine((ParryBallCoolDown()));

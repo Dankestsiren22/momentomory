@@ -4,11 +4,13 @@ using UnityEngine;
 public class TestParryBall : MonoBehaviour
 {
     Rigidbody2D rb;
+    GameObject Player;
     public bool Parryed;
     public GameObject explosin;
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        Player = GameObject.Find("Player");
     }
 
     public void FixedUpdate()
@@ -24,7 +26,7 @@ public class TestParryBall : MonoBehaviour
         }
         else if (other.CompareTag("Player"))
         {
-            GameObject p = Instantiate(explosin, transform.position, transform.rotation);
+            GameObject p = Instantiate(explosin, Player.transform.position, Player.transform.rotation);
             Destroy(gameObject);
             Destroy(p, .5f);
 
