@@ -5,12 +5,15 @@ public class TestParryBall : MonoBehaviour
 {
     Rigidbody2D rb;
     GameObject Player;
+    public Vector3 destenation;
     public bool Parryed;
     public GameObject explosin;
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
+        destenation = Player.transform.position;
+
     }
 
     public void FixedUpdate()

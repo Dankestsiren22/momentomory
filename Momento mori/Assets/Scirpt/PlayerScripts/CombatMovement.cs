@@ -11,6 +11,7 @@ public class CombatMovement : MonoBehaviour
     public float LR_Movement;
     Canvas DeathMenu;
     
+    
     public bool CanParry;
     public float parryWindow;
     public int DamageDelt;
@@ -20,6 +21,10 @@ public class CombatMovement : MonoBehaviour
     private void OnDisable() => controls.Disable();
     public void Awake()
     {
+        
+
+
+
         rb = GetComponent<Rigidbody2D>();
         controls = new Controls();
         CanParry = true;

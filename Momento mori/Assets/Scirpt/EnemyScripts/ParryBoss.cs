@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ParryBoss : MonoBehaviour
 {
+    public int health;
     public int ParryBallCD;
     public bool CanParryBall;
     public GameObject ParryBall;
@@ -17,17 +18,17 @@ public class ParryBoss : MonoBehaviour
     void Update()
     {
         if (CanParryBall == true)
-        {
-            GameObject p = Instantiate(ParryBall, transform.position, transform.rotation);
-            Destroy(p, 7f);
-            CanParryBall = false;
-            StartCoroutine((ParryBallCoolDown()));
-
-            
-        }
+            ParryBallAttack();
+        
     }
 
-
+    public void ParryBallAttack()
+    {
+        GameObject p = Instantiate(ParryBall, transform.position, transform.rotation);
+        Destroy(p, 7f);
+        CanParryBall = false;
+        StartCoroutine((ParryBallCoolDown()));
+    }
     IEnumerator ParryBallCoolDown()
     {
         yield return new WaitForSeconds(ParryBallCD);
