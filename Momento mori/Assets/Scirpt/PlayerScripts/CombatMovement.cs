@@ -14,6 +14,7 @@ public class CombatMovement : MonoBehaviour
     
     public bool CanParry;
     public float parryWindow;
+    public float parrycooldown;
     public int DamageDelt;
 
     public int health;
@@ -63,9 +64,10 @@ public class CombatMovement : MonoBehaviour
     {
         if (CanParry == true)
         {
-            transform.gameObject.tag = "ActiveParry";
             CanParry = false;
+            transform.gameObject.tag = "ActiveParry";
             StartCoroutine(ParryWindow());
+            StartCoroutine(ParryCooldown());
         }
         
     }
@@ -90,7 +92,11 @@ public class CombatMovement : MonoBehaviour
         yield return new WaitForSeconds(parryWindow);
         gameObject.tag = "Player";
     }
-
+    IEnumerator ParryCooldown()
+    {
+        yield return new WaitForSeconds(parrycooldown);
+        CanParry = true;
+    }
 
 
 }

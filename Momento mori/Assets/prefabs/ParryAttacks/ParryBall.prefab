@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b80966417e6af488b9be078db2c15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestParryBall
+  speed: 10
+  destenation: {x: 0, y: 0, z: 0}
   Parryed: 0
   explosin: {fileID: 5398479957093154208, guid: 010053e7696f951489232d551e86f440, type: 3}
 --- !u!50 &4433970826569819696
@@ -130,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 0
 --- !u!70 &4435998767233240384
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
