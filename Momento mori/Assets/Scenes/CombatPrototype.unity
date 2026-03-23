@@ -2081,11 +2081,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9938c6783b02c8e4fafd741cbd936029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParryBoss
-  health: 0
+  health: 1
   ParryBallCD: 5
   CanParryBall: 0
   ParryBall: {fileID: 2190440948370881155, guid: 9e1a7cce97b07fe4497082e8346d1885, type: 3}
   BasicAttak: {fileID: 1879415582393363408, guid: 918649cc65a457c4492d7d2c40afb87d, type: 3}
+  swip: {fileID: 5948102908001777373, guid: 4246fc2dabeb6e949b190661362369e5, type: 3}
+  slash: {fileID: 9051206812379887310, guid: d797c1f02542a4f428dafe8af8d29b9e, type: 3}
+  SwipCD: 4
+  SlashCD: 6
+  CanSwipe: 0
+  CanSlash: 0
   CanBasic: 0
 --- !u!1 &1973064212
 GameObject:
