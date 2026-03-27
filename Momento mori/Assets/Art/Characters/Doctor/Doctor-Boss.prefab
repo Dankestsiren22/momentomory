@@ -196,8 +196,8 @@ MonoBehaviour:
   BasicAttak: {fileID: 1879415582393363408, guid: 918649cc65a457c4492d7d2c40afb87d, type: 3}
   swip: {fileID: 5948102908001777373, guid: 4246fc2dabeb6e949b190661362369e5, type: 3}
   slash: {fileID: 9051206812379887310, guid: d797c1f02542a4f428dafe8af8d29b9e, type: 3}
-  SwipCD: 0
-  SlashCD: 0
+  SwipCD: 4
+  SlashCD: 6
   CanSwipe: 0
   CanSlash: 0
   CanBasic: 0

@@ -1306,11 +1306,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 910585794978597001, guid: 7e69b8c5556f1c24e85617657e86ee1f, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3486851440288414347, guid: 7e69b8c5556f1c24e85617657e86ee1f, type: 3}
       propertyPath: m_Name
       value: Doctor-Boss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8663591468525747264, guid: 7e69b8c5556f1c24e85617657e86ee1f, type: 3}
+      propertyPath: SwipCD
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 910585794978597001, guid: 7e69b8c5556f1c24e85617657e86ee1f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
