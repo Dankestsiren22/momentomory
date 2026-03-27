@@ -9,8 +9,9 @@ public class CombatMovement : MonoBehaviour
     public int Speed;
     public float UD_Movement;
     public float LR_Movement;
-    Canvas DeathMenu;
+    //Canvas DeathMenu;
     
+    Animator animator;
     
     public bool CanParry;
     public float parryWindow;
@@ -23,6 +24,7 @@ public class CombatMovement : MonoBehaviour
     public void Awake()
     {
         
+        animator = GetComponent<Animator>();
 
 
 
@@ -31,12 +33,12 @@ public class CombatMovement : MonoBehaviour
         CanParry = true;
         controls.Player.UDFB_Movement.performed += ctx => UD_Movement = ctx.ReadValue<float>();
         controls.Player.UDFB_Movement.canceled += _ => UD_Movement = 0;
-        DeathMenu = GameObject.Find("DeathCanvas").GetComponent<Canvas>();
+        //DeathMenu = GameObject.Find("DeathCanvas").GetComponent<Canvas>();
         controls.Player.TurningLR_Movement.performed += ctx => LR_Movement = ctx.ReadValue<float>();
         controls.Player.TurningLR_Movement.canceled += _ => LR_Movement = 0;
 
         controls.Player.ParrySelect.started += _ => parry();
-        DeathMenu.enabled = false;
+        //DeathMenu.enabled = false;
         IsDead = false;
     }
     void FixedUpdate()
@@ -54,7 +56,7 @@ public class CombatMovement : MonoBehaviour
         }
         if (IsDead == true)
         {
-            DeathMenu.enabled = true;
+            //DeathMenu.enabled = true;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -68,6 +70,7 @@ public class CombatMovement : MonoBehaviour
             transform.gameObject.tag = "ActiveParry";
             StartCoroutine(ParryWindow());
             StartCoroutine(ParryCooldown());
+            animator.SetTrigger("Parry");
         }
         
     }

@@ -30,6 +30,9 @@ public class BasicBall : MonoBehaviour
             Destroy(gameObject);
             Destroy(p, .5f);
         }
-
+        else if (other.CompareTag("ActiveParry"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

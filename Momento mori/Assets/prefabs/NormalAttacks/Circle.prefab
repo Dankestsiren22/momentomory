@@ -104,7 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   destenation: {x: 0, y: 0, z: 0}
-  Parryed: 0
   explosin: {fileID: 5398479957093154208, guid: 010053e7696f951489232d551e86f440, type: 3}
 --- !u!50 &-2300541921894505895
 Rigidbody2D:
@@ -121,7 +120,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
