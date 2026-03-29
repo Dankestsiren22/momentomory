@@ -75,18 +75,17 @@ public class CombatMovement : MonoBehaviour
         
     }
 
+    public void Damage()
+    {
+        health--;
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (transform.gameObject.tag == "ActiveParry" & other.CompareTag("ParryableAttack"))
         {
             CanParry = true;
             transform.gameObject.tag = "Player";
-            DamageDelt++;
-        }
-        
-        if (other.CompareTag("Explosin"))
-        {
-            health--;
         }
     }
 
