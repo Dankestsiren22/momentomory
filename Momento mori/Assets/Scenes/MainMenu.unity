@@ -338,9 +338,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3571689237859059542, guid: 26262203b4c68214cb2afa0b5945f539, type: 3}
+      - m_Target: {fileID: 2871977676305180064, guid: 26262203b4c68214cb2afa0b5945f539, type: 3}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: lobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

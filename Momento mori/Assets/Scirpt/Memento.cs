@@ -3,6 +3,7 @@ using UnityEngine;
 public class Memento : MonoBehaviour
 {
     private Transform cameraTransform;
+    public SceneManagement Scenemanager;
     private void Awake()
     {
         if (Camera.main != null)
@@ -20,6 +21,10 @@ public class Memento : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
+        {
             Destroy(gameObject);
+            Scenemanager.PlagueDoctorCombat();
+        }
+
     }
 }

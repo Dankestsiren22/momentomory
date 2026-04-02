@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Leech : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public CombatMovement Player;
+    public void Awake()
+    {
+       
+    }
     void Start()
     {
-        
+        //head twords Destination play landing animation and begin moving towards player
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        //move attack player when close if parried die
     }
 }

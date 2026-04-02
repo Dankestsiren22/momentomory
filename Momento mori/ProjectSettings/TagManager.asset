@@ -9,6 +9,7 @@ TagManager:
   - Explosin
   - Memento
   - CurrentLevel
+  - MainMemento
   layers:
   - Default
   - TransparentFX
