@@ -5,12 +5,15 @@ public class PlayerMovement : MonoBehaviour
     Controls controls;
     Rigidbody rb;
 
-    float verticalMove;
-    float horizontalMove;
+    public GameObject CurrentLevel;
 
     public Canvas PauseMenu;
 
     public bool IsPaused;
+
+    public bool Memento1;
+    public bool Memento2;
+    public bool Memento3;
 
     public float FBmovment;
     public float Rotation;
@@ -35,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         PauseMenu.enabled = false;
+
+        CurrentLevel = GameObject.FindGameObjectWithTag("CurrentLevel");
     }
 
     public void Update()
@@ -64,5 +69,26 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+    public void GrabMemento()
+    {
+        if (Memento1 != true)
+            Memento1 = true;
+        else if (Memento2 != true) 
+            Memento2 = true;
+        else if (Memento3 != true)
+            Memento3 = true;
+        else
+        {
+            Debug.Log("All Memento's gathered");
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Memento")
+        {
+            GrabMemento();
+
+        }
+    }
 }
