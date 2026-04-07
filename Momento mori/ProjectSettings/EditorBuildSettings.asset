@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Main_Menu/MainMenu.unity
     guid: d703ecc619b4a214e9cc6fb32fdcef7a
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/Lobby/Lobby.unity
     guid: ec7ffb2f7e68d954a982f08caf159638
   - enabled: 1
-    path: Assets/Scenes/PlagueDoctor.unity
+    path: Assets/Scenes/Plague_Doctor_Fight/PlagueDoctor.unity
     guid: d2ee7a2aaec0a574388b9fd2e422777f
   - enabled: 1
-    path: Assets/Scenes/CombatPrototype.unity
+    path: Assets/Scenes/Testing/CombatPrototype.unity
     guid: 185932e99af108844a7c09f2f049a171
   - enabled: 1
-    path: Assets/Scenes/FPSPrototype.unity
+    path: Assets/Scenes/Testing/FPSPrototype.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 4f0124cb8ce749746adaa83993da9061, type: 3}
