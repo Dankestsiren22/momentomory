@@ -20,7 +20,11 @@ public class CombatMovement : MonoBehaviour
 
     public int health;
     private void OnEnable() => controls.Enable();
-    private void OnDisable() => controls.Disable();
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
+
     public void Awake()
     {
         

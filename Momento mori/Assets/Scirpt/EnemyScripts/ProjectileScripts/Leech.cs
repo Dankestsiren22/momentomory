@@ -2,17 +2,24 @@ using UnityEngine;
 
 public class Leech : MonoBehaviour
 {
-    public CombatMovement Player;
+    public Transform TargetPosition;
+    int speed = 5;
+    
     public void Awake()
     {
        
     }
     void Start()
     {
-        //head twords Destination play landing animation and begin moving towards player
     }
     void Update()
     {
-        //move attack player when close if parried die
+        MoveToTargetPosition(TargetPosition);
+
+    }
+
+    private void MoveToTargetPosition(Transform Target)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);
     }
 }

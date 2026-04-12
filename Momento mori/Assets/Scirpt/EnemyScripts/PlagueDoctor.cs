@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class PlagueDoctor : MonoBehaviour
 {
+    public Transform[] TargetTransforms;
+    public GameObject LeechPoint;
     public Animator animator;
     public int health;
 
@@ -23,11 +26,6 @@ public class PlagueDoctor : MonoBehaviour
     public GameObject swipe;
     public GameObject straight;
     public GameObject leech;
-
-    public void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
     public void PlaySwipe()
     {
         animator.SetTrigger("Swipe");
@@ -64,11 +62,14 @@ public class PlagueDoctor : MonoBehaviour
         animator.SetTrigger("Leech");
         animator.ResetTrigger("Leech");
     }
-    public void Leech()
+    public void Leech(int TragetPosition)
     {
+        
         if (canleech == true)
         {
-            Instantiate(leech);
+            GameObject GameObj = Instantiate(leech, LeechPoint.gameObject.transform.position, (LeechPoint.gameObject.transform.rotation));
+            Leech lech = GameObj.GetComponent<Leech>();
+            lech.TargetPosition = TargetTransforms[TragetPosition];
             canstraight = false;
             StartCoroutine(LeechCooldown());
         }

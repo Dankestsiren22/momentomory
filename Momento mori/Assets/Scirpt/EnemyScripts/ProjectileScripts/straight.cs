@@ -4,7 +4,7 @@ public class straight : MonoBehaviour
 {
     public PlagueDoctor Boss;
     public CombatMovement Player;
-    public void Awake()
+    private void Start()
     {
         Destroy(gameObject, 5f);
     }
