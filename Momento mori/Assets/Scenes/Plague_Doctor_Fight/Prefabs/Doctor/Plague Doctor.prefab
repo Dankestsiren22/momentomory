@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2872097820442727771}
   - component: {fileID: 2564903181976602559}
-  - component: {fileID: 6147784240228847136}
   - component: {fileID: 1337739210983906523}
+  - component: {fileID: 3483881008022220539}
   m_Layer: 0
   m_Name: Plague Doctor
   m_TagString: Untagged
@@ -56,35 +56,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6147784240228847136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4308781080176668197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90549a4ecd8c9e24ba103187200e2bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetTransforms:
-  - {fileID: 1174819838800884428, guid: f7fda2a3a63bbb64aaeea62e15113e55, type: 3}
-  - {fileID: 4447014209416895384, guid: 9b241a83872dbd14984615452fc79672, type: 3}
-  - {fileID: 6821927221699360854, guid: 5cefc52b3dbc1204ba6b21e310215a74, type: 3}
-  - {fileID: 5362746232983988273, guid: d9062cb0f9962e4468e0146e72c2659b, type: 3}
-  LeechPoint: {fileID: 5002899344182719566, guid: 389249ef0a62003449add90a069ae966, type: 3}
-  animator: {fileID: 2564903181976602559}
-  health: 10
-  canswipe: 1
-  canstraight: 1
-  canleech: 1
-  swipeCD: 0
-  straightCD: 0
-  leechCD: 0
-  swipe: {fileID: 5948102908001777373, guid: 4246fc2dabeb6e949b190661362369e5, type: 3}
-  straight: {fileID: 9051206812379887310, guid: d797c1f02542a4f428dafe8af8d29b9e, type: 3}
-  leech: {fileID: 8580759652127957914, guid: 143123a1ca50608448e33dac5bf69577, type: 3}
 --- !u!212 &1337739210983906523
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1166010366, guid: b77930df7f8ca9f40b008f853b7a4733, type: 3}
+  m_Sprite: {fileID: -1278978073, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,3 +111,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3483881008022220539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308781080176668197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3751ce143fbc2ff4ba96ac9519041e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetTransforms: []
+  LeechPoint: {fileID: 5002899344182719566, guid: 389249ef0a62003449add90a069ae966, type: 3}
+  swipe: {fileID: 5948102908001777373, guid: 4246fc2dabeb6e949b190661362369e5, type: 3}
+  straight: {fileID: 1012033579177670717, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
+  leech: {fileID: 8580759652127957914, guid: 143123a1ca50608448e33dac5bf69577, type: 3}
+  Player: {fileID: 0}
+  Distance: 0
+  CanAttack: 1
+  sequence: 0
+  animator: {fileID: 2564903181976602559}
+  attacking: 0
+  AttackCD: 1

@@ -5,10 +5,10 @@ using TMPro;
 
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
+    int Health;
     TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;
     public GameObject LeechPoint;
-    RuntimeAnimatorController rac;
     public GameObject swipe;
     public GameObject straight;
     public GameObject leech;
@@ -16,7 +16,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public CombatMovement Player;
     public float Distance; //from the center of map not the boss
     public bool CanAttack;
-    int sequence;
+    public int sequence;
     public Animator animator;
     public bool attacking;
 
@@ -25,7 +25,6 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public void Awake()
     {
         
-        rac = animator.runtimeAnimatorController;
     }
     public void Start()
     {
@@ -39,9 +38,10 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     {
         if (AttackCD == 0)
         {
-            sequence = Random.Range(1, 2);
+            sequence = Random.Range(1,3);
             Combo(sequence);
-            AttackCD = Random.Range(1f, 2f);
+            AttackCD = Random.Range(1f,3f);
+            StartCoroutine(Attacd());
         }
         else { Debug.Log(AttackCD); }
     }
@@ -95,34 +95,27 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
 
         Debug.Log("Played sequence");
     }
- 
-    public void PlayLeech(float x)
+    public void PlayLeech()
     {
        attacking = true;
-       animator.Play("Doctor-Leech-Attack");     
+       animator.Play("Doctor-Leech-REAL");     
     }
     public void PlayStraight()
     {
-
-            animator.Play("Doctor-Straight-Attack");
+       animator.Play("Doctorr-Straight-REAL");
     }
     public void PlaySwipe()
     {
-            animator.Play("Doctor-Swipe-Attack");       
+       animator.Play("Doctor-Swipe_REAL");       
     }
-   
-
     public void Swipe()
     {
         Instantiate(swipe);
-
     }
-
-    public void Straight()
+    public void Straight(int x)
     {
-        Instantiate(straight);
-
-
+        Vector3 Spot = new Vector3(transform.position.x, transform.position.y - x, transform.position.z);
+        Instantiate(straight, Spot, transform.rotation);
     }
     public void Leech(int TragetPosition)
     {
