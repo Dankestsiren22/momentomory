@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class straight : MonoBehaviour
 {
-    public PlagueDoctor Boss;
     public CombatMovement Player;
     private void Start()
     {
@@ -14,7 +13,7 @@ public class straight : MonoBehaviour
         if (other.tag == "ActiveParry")
         {
             Destroy(gameObject);
-            Boss.Damage();
+            
         }
         else if (other.tag == "Player")
         {
