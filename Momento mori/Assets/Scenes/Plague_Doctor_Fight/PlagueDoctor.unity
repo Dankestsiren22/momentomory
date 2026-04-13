@@ -658,6 +658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1337739210983906523, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1278978073, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - target: {fileID: 2872097820442727771, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -738,6 +742,7 @@ MonoBehaviour:
   CanAttack: 1
   animator: {fileID: 1863598258}
   attacking: 0
+  AttackCD: 1
 --- !u!95 &1863598258 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2564903181976602559, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
