@@ -12,6 +12,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public GameObject swipe;
     public GameObject straight;
     public GameObject leech;
+    public GameObject Portal;
 
     public CombatMovement Player;
     public float Distance; //from the center of map not the boss
@@ -50,12 +51,11 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     {
         while (AttackCD > 0)
         {
-            Attack();
             AttackCD -= 0.1f;
             yield return new WaitForSeconds(0.1f);
-
         }
         AttackCD = 0;
+        Attack();
     }
     public void Combo(int sequence)
     {
@@ -122,5 +122,9 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
         GameObject GameObj = Instantiate(leech, LeechPoint.gameObject.transform.position, (LeechPoint.gameObject.transform.rotation));
         Leech lech = GameObj.GetComponent<Leech>();
         lech.TargetPosition = TargetTransforms[TragetPosition];
+    }
+    public void portal()
+    {
+        Instantiate(Portal);
     }
 }
