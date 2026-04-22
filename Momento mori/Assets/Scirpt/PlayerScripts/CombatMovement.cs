@@ -86,7 +86,7 @@ public class CombatMovement : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (transform.gameObject.tag == "ActiveParry" & other.CompareTag("ParryableAttack"))
+        if (transform.gameObject.tag == "ActiveParry" && other.tag == "ParryableAttack")
         {
             CanParry = true;
             transform.gameObject.tag = "Player";
