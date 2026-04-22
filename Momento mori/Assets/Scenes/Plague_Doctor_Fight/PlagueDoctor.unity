@@ -442,7 +442,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1534053624, guid: c2be9fa809251ae43af4c6f32a2a6ffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -794,7 +794,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1863598255}
         m_TargetAssemblyTypeName: PlagueDoctorCombatBrain, Assembly-CSharp
-        m_MethodName: PlayStraight
+        m_MethodName: PlayLeech
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -851,13 +851,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1337739210983906523, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
-      propertyPath: m_FlipX
-      value: 0
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1337739210983906523, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1278978073, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - target: {fileID: 2872097820442727771, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9
@@ -911,13 +907,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: swipe
+      value: 
+      objectReference: {fileID: 8762991517371954758, guid: c7f5fdd3733b51f4286fd03d708f8ad7, type: 3}
+    - target: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: Health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 504873683726222031}
     - target: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: Portal
+      value: 
+      objectReference: {fileID: 1052569092365041917, guid: ae752732d2f82f246a0ddadd3db464ba, type: 3}
+    - target: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: straight
       value: 
-      objectReference: {fileID: 133182585029172978, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
+      objectReference: {fileID: 4730236577406159340, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
     - target: {fileID: 4308781080176668197, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_Name
       value: Plague Doctor

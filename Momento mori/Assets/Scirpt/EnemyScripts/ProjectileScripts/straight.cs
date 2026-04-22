@@ -4,9 +4,10 @@ using UnityEngine;
 public class straight : MonoBehaviour
 {
     public CombatMovement Player;
+    public PlagueDoctorCombatBrain Boss;
     private void Start()
     {
-        StartCoroutine(Spawn());
+
         Destroy(gameObject, 5f);
     }
 
@@ -15,21 +16,12 @@ public class straight : MonoBehaviour
         if (other.tag == "ActiveParry")
         {
             Destroy(gameObject);
-            
+            Boss.Damage(1, Boss);
         }
         else if (other.tag == "Player")
         {
-            Destroy(gameObject);
-            Player.Damage();
+            // Destroy(gameObject);
+
         }
     }
-    IEnumerator Spawn()
-    {
-        transform.GetChild(0).gameObject.SetActive(true);
-        yield return new WaitForSeconds(.1f);
-        transform.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(.1f);
-        transform.GetChild(2).gameObject.SetActive(true);
-    }
-
 }

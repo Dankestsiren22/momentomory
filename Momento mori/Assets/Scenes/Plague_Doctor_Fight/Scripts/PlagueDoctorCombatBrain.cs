@@ -5,7 +5,7 @@ using TMPro;
 
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
-    int Health;
+    public int Health;
     TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;
     public GameObject LeechPoint;
@@ -29,7 +29,8 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     }
     public void Start()
     {
-        StartCoroutine(Attacd());
+        //StartCoroutine(Attacd());
+        
     }
     void Update()
     {
@@ -122,6 +123,10 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
         GameObject GameObj = Instantiate(leech, LeechPoint.gameObject.transform.position, (LeechPoint.gameObject.transform.rotation));
         Leech lech = GameObj.GetComponent<Leech>();
         lech.TargetPosition = TargetTransforms[TragetPosition];
+    }
+    public void Damage(int Damage, PlagueDoctorCombatBrain target)
+    {
+        target.Health = target.Health - Damage;
     }
     public void portal()
     {
