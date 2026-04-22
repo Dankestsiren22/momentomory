@@ -29,7 +29,8 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     }
     public void Start()
     {
-        StartCoroutine(Attacd());
+        //StartCoroutine(Attacd());
+        
     }
     void Update()
     {
