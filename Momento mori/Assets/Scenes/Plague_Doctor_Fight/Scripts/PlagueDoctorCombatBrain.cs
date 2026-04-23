@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
+    [SerializeField] private AudioClip[] attackSoundClips;
     int Health;
     TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;
@@ -74,10 +75,16 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public IEnumerator Sequence1()
     {
         PlaySwipe();
+        
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
 
         yield return new WaitForSeconds(0.8f);
 
         PlayStraight();
+
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
 
         yield return new WaitForSeconds(0.7f);
 
@@ -86,10 +93,16 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public IEnumerator Sequence2()
     {
         PlaySwipe();
+        
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
 
         yield return new WaitForSeconds(0.8f);
 
         PlaySwipe();
+
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
 
         yield return new WaitForSeconds(0.7f);
 

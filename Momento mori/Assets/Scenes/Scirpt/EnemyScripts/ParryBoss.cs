@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UIElements;
+using System.Runtime.CompilerServices;
 
 public class ParryBoss : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ParryBoss : MonoBehaviour
     public bool CanSwipe;
     public bool CanSlash;
     public bool CanBasic;
+   
 
     void Awake()
     {
@@ -39,9 +41,7 @@ public class ParryBoss : MonoBehaviour
         if (CanSwipe == true)
             SwipeAttack();
         if (CanSlash == true)
-            SlashAttack();
-
-        
+            SlashAttack();  
     }
 
     public void ParryBallAttack()
