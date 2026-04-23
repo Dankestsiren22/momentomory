@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
+    public int MaxHealth;
     public int Health;
     TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;

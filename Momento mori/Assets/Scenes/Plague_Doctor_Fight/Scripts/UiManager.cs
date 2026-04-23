@@ -5,15 +5,13 @@ public class UiManager : MonoBehaviour
 {
     public Image PlayerHp;
     public Image BossHp;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
+    public CombatMovement player;
+    public PlagueDoctorCombatBrain plagueDoctor;
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerHp.fillAmount = (float)player.Health / (float)player.MaxHealth;
+        BossHp.fillAmount = (float)plagueDoctor.Health / (float)plagueDoctor.MaxHealth;
+
     }
 }

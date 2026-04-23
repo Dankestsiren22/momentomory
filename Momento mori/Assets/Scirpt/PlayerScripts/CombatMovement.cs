@@ -17,8 +17,8 @@ public class CombatMovement : MonoBehaviour
     public float parryWindow;
     public float parrycooldown;
     public int DamageDelt;
-
-    public int health;
+    public int MaxHealth;
+    public int Health;
     private void OnEnable() => controls.Enable();
     private void OnDisable()
     {
@@ -54,7 +54,7 @@ public class CombatMovement : MonoBehaviour
     }
     private void Update()
     {
-        if (health <= 0)
+        if (Health <= 0)
         {
             IsDead = true;
         }
@@ -81,7 +81,7 @@ public class CombatMovement : MonoBehaviour
 
     public void Damage()
     {
-        health--;
+        Health--;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
