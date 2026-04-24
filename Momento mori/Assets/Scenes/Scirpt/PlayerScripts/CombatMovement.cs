@@ -91,6 +91,10 @@ public class CombatMovement : MonoBehaviour
             CanParry = true;
             transform.gameObject.tag = "Player";
         }
+        /*else if (other.tag == "ParryableAttack")
+        {
+            Damage();
+        }*/
     }
 
     IEnumerator ParryWindow()
@@ -103,6 +107,4 @@ public class CombatMovement : MonoBehaviour
         yield return new WaitForSeconds(parrycooldown);
         CanParry = true;
     }
-
-
 }

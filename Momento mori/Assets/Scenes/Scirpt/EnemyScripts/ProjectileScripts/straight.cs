@@ -7,7 +7,7 @@ public class straight : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Spawn());
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 1f);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -19,8 +19,8 @@ public class straight : MonoBehaviour
         }
         else if (other.tag == "Player")
         {
+            Player.health = Player.health--;
             Destroy(gameObject);
-            Player.Damage();
         }
     }
     IEnumerator Spawn()
