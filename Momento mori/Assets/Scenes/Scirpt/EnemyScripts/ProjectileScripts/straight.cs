@@ -19,7 +19,7 @@ public class straight : MonoBehaviour
         }
         else if (other.tag == "Player")
         {
-            Player.health = Player.health--;
+            Player.health = 3;
             Destroy(gameObject);
         }
     }
