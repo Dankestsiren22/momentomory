@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Doctorr-Straight-REAL
+  m_Name: DoctorOutline
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -89,7 +89,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6363636
-    functionName: Straight
+    functionName: TheEnd
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 9.66
