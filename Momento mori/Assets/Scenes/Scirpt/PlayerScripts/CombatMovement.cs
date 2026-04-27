@@ -88,6 +88,7 @@ public class CombatMovement : MonoBehaviour
     {
         if (transform.gameObject.tag == "ActiveParry" & other.CompareTag("ParryableAttack"))
         {
+
             CanParry = true;
             transform.gameObject.tag = "Player";
         }

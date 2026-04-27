@@ -1,14 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UiManager : MonoBehaviour
+public class HealthHandler : MonoBehaviour
 {
-    public Image PlayerHp;
-    public Image BossHp;
+    public int Health;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        BossHp = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame

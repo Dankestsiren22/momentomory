@@ -4,6 +4,15 @@ using UnityEngine;
 public class straight : MonoBehaviour
 {
     public CombatMovement Player;
+    public GameObject Parent;
+
+
+
+    public void Damage()
+    {
+        Parent.GetComponent<HealthHandler>().Health--;
+    }
+
     private void Start()
     {
         StartCoroutine(Spawn());
@@ -14,13 +23,13 @@ public class straight : MonoBehaviour
     {
         if (other.tag == "ActiveParry")
         {
+            Damage();
             Destroy(gameObject);
             
         }
         else if (other.tag == "Player")
         {
             Player.health = 3;
-            Destroy(gameObject);
         }
     }
     IEnumerator Spawn()

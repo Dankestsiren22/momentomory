@@ -6,8 +6,6 @@ using TMPro;
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
     [SerializeField] private AudioClip[] attackSoundClips;
-    int Health;
-    TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;
     public GameObject LeechPoint;
     public GameObject swipe;
@@ -25,10 +23,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
 
     public float AttackCD = 1;
 
-    public void Awake()
-    {
-        
-    }
+    
     public void Start()
     {
         StartCoroutine(Attacd());
@@ -131,7 +126,10 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public void Straight(float x)
     {
         Vector3 Spot = new Vector3(transform.position.x, transform.position.y - x, transform.position.z);
-        Instantiate(straight, Spot, transform.rotation);
+        GameObject p = Instantiate(straight, Spot, transform.rotation);
+        straight l = p.GetComponent<straight>();
+        l.Parent = gameObject;
+        
     }
     public void Leech(int TragetPosition)
     {
