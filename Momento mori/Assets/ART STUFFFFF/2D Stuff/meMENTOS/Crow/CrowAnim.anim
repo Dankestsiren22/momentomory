@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Leech-Idle
+  m_Name: CrowAnim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1718838103, guid: a0ff6fcdf9f07dc4e8aceec04222f13d, type: 3}
-    - time: 0.5
-      value: {fileID: -190548559, guid: a0ff6fcdf9f07dc4e8aceec04222f13d, type: 3}
+      value: {fileID: -75162102, guid: a212d24676e9c7e4887c31d1d02b6984, type: 3}
+    - time: 1
+      value: {fileID: -762310270, guid: a212d24676e9c7e4887c31d1d02b6984, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 2
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -46,14 +46,14 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1718838103, guid: a0ff6fcdf9f07dc4e8aceec04222f13d, type: 3}
-    - {fileID: -190548559, guid: a0ff6fcdf9f07dc4e8aceec04222f13d, type: 3}
+    - {fileID: -75162102, guid: a212d24676e9c7e4887c31d1d02b6984, type: 3}
+    - {fileID: -762310270, guid: a212d24676e9c7e4887c31d1d02b6984, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
