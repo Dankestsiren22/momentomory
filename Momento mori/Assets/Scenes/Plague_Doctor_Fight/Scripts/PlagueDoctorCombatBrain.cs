@@ -5,7 +5,8 @@ using TMPro;
 
 public class PlagueDoctorCombatBrain : MonoBehaviour
 {
-    public int Health;
+    [SerializeField] private AudioClip[] attackSoundClips;
+    int Health;
     TextMeshProUGUI Countdwon;
     public Transform[] TargetTransforms;
     public GameObject LeechPoint;
@@ -13,6 +14,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public GameObject straight;
     public GameObject leech;
     public GameObject Portal;
+    public GameObject StraightOutline;
 
     public CombatMovement Player;
     public float Distance; //from the center of map not the boss
@@ -29,8 +31,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     }
     public void Start()
     {
-        //StartCoroutine(Attacd());
-        
+        StartCoroutine(Attacd());
     }
     void Update()
     {
@@ -42,7 +43,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
         {
             sequence = Random.Range(1,3);
             Combo(sequence);
-            AttackCD = Random.Range(1f,3f);
+            AttackCD = Random.Range(2f,5f);
             StartCoroutine(Attacd());
         }
         else { Debug.Log(AttackCD); }
@@ -75,12 +76,18 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     public IEnumerator Sequence1()
     {
         PlaySwipe();
+        
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
 
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.9f);
 
         PlayStraight();
 
-        yield return new WaitForSeconds(0.7f);
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
+
+        yield return new WaitForSeconds(0.8f);
 
         Debug.Log("Played sequence");
     }
@@ -88,11 +95,17 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     {
         PlaySwipe();
 
-        yield return new WaitForSeconds(0.8f);
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
+
+        yield return new WaitForSeconds(0.9f);
 
         PlaySwipe();
 
-        yield return new WaitForSeconds(0.7f);
+        //SFX
+        SoundFXManager.instance.PlayRandomSoundFXClip(attackSoundClips, transform, 1f);
+
+        yield return new WaitForSeconds(0.8f);
 
         Debug.Log("Played sequence");
     }
@@ -103,7 +116,9 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     }
     public void PlayStraight()
     {
-       animator.Play("Doctorr-Straight-REAL");
+        Vector3 Spot1 = new Vector3(transform.position.x - .5f, transform.position.y, transform.position.z);
+        Instantiate(StraightOutline, Spot1, transform.rotation);
+        animator.Play("Doctorr-Straight-REAL");
     }
     public void PlaySwipe()
     {
@@ -113,7 +128,7 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
     {
         Instantiate(swipe);
     }
-    public void Straight(int x)
+    public void Straight(float x)
     {
         Vector3 Spot = new Vector3(transform.position.x, transform.position.y - x, transform.position.z);
         Instantiate(straight, Spot, transform.rotation);
@@ -123,10 +138,6 @@ public class PlagueDoctorCombatBrain : MonoBehaviour
         GameObject GameObj = Instantiate(leech, LeechPoint.gameObject.transform.position, (LeechPoint.gameObject.transform.rotation));
         Leech lech = GameObj.GetComponent<Leech>();
         lech.TargetPosition = TargetTransforms[TragetPosition];
-    }
-    public void Damage(int Damage, PlagueDoctorCombatBrain target)
-    {
-        target.Health = target.Health - Damage;
     }
     public void portal()
     {

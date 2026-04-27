@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2, y: 6, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,13 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3751ce143fbc2ff4ba96ac9519041e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
   TargetTransforms: []
   LeechPoint: {fileID: 5002899344182719566, guid: 389249ef0a62003449add90a069ae966, type: 3}
-  swipe: {fileID: 8762991517371954758, guid: c7f5fdd3733b51f4286fd03d708f8ad7, type: 3}
-  straight: {fileID: 133182585029172978, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
+  swipe: {fileID: 5948102908001777373, guid: 4246fc2dabeb6e949b190661362369e5, type: 3}
+  straight: {fileID: 1012033579177670717, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
   leech: {fileID: 8580759652127957914, guid: 143123a1ca50608448e33dac5bf69577, type: 3}
-  Portal: {fileID: 1052569092365041917, guid: ae752732d2f82f246a0ddadd3db464ba, type: 3}
   Player: {fileID: 0}
   Distance: 0
   CanAttack: 1
