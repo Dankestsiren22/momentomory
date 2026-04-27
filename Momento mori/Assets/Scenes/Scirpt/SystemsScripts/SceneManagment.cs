@@ -19,12 +19,17 @@ public class SceneManagement: MonoBehaviour
 
     public void PlagueDoctor()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     public void PlagueDoctorCombat()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void Settings()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }
