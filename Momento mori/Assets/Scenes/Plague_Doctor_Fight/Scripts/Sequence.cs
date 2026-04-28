@@ -1,9 +1,10 @@
 using System;
 using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 [Serializable]
 public class Sequence
 {
-   // public List[]<string> items;
+    public List<Block> Blocks;
 }

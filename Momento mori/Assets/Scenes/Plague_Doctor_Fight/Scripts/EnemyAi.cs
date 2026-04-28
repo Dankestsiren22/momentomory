@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 public class EnemyAi : MonoBehaviour
 {
     public int MaxHealth;
@@ -7,7 +9,7 @@ public class EnemyAi : MonoBehaviour
     public int AttackCoolDown;
 
     public GameObject[] MoveList;
-    public Sequence[] AttackSequences;
+    public List<Sequence> AttackSequences;
     public AudioClip[] audioClips;
 
     public Animator animator;

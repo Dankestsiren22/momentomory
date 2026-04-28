@@ -1207,7 +1207,11 @@ MonoBehaviour:
   CurrentHealth: 0
   AttackCoolDown: 0
   MoveList: []
-  AttackSequences: []
+  AttackSequences:
+  - Blocks:
+    - hi: 
+      Sound: {fileID: 0}
+      CoolDown: 0
   audioClips: []
   animator: {fileID: 0}
 --- !u!1 &1983626954
