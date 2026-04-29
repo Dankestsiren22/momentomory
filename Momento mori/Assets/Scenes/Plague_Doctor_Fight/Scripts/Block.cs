@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class Block
 {
-    public string hi;
+    public string AnimationName;
+    public float AnimationLength;
     public AudioClip Sound;
-    public int CoolDown;
 }

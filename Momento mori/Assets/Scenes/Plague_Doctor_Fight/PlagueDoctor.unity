@@ -986,9 +986,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1863598255}
-        m_TargetAssemblyTypeName: PlagueDoctorCombatBrain, Assembly-CSharp
-        m_MethodName: PlayStraight
+      - m_Target: {fileID: 1863598261}
+        m_TargetAssemblyTypeName: EnemyAi, Assembly-CSharp
+        m_MethodName: Attack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1148,7 +1148,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plague Doctor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2872097820442727771, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
@@ -1157,40 +1158,18 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4308781080176668197, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1863598260}
-    - targetCorrespondingSourceObject: {fileID: 4308781080176668197, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1863598261}
   m_SourcePrefab: {fileID: 100100000, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
---- !u!114 &1863598255 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3483881008022220539, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+--- !u!95 &1863598254 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2564903181976602559, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
   m_PrefabInstance: {fileID: 1863598253}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609148110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3751ce143fbc2ff4ba96ac9519041e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1863598258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2872097820442727771, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
   m_PrefabInstance: {fileID: 1863598253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1863598260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609148110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d00bd9cbbed05641a68c0e9df1d820f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 10
 --- !u!114 &1863598261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,14 +1185,33 @@ MonoBehaviour:
   MaxHealth: 0
   CurrentHealth: 0
   AttackCoolDown: 0
-  MoveList: []
+  animator: {fileID: 1863598254}
+  audioSource: {fileID: 0}
   AttackSequences:
-  - Blocks:
-    - hi: 
+  - Name: Sequence 1
+    Blocks:
+    - AnimationName: Doctor-Swipe_REAL
+      AnimationLength: 0.8
       Sound: {fileID: 0}
-      CoolDown: 0
-  audioClips: []
-  animator: {fileID: 0}
+    - AnimationName: Doctor-Swipe_REAL
+      AnimationLength: 0.8
+      Sound: {fileID: 0}
+  - Name: Sequence 2
+    Blocks:
+    - AnimationName: Doctor-Swipe_REAL
+      AnimationLength: 0.8
+      Sound: {fileID: 0}
+    - AnimationName: Back-Swipe
+      AnimationLength: 0.8
+      Sound: {fileID: 0}
+    - AnimationName: Doctorr-Straight-REAL
+      AnimationLength: 0.7
+      Sound: {fileID: 0}
+  - Name: Sequence 3
+    Blocks:
+    - AnimationName: Doctorr-Straight-REAL
+      AnimationLength: 0.7
+      Sound: {fileID: 0}
 --- !u!1 &1983626954
 GameObject:
   m_ObjectHideFlags: 0
