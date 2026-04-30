@@ -34,6 +34,7 @@ public class EnemyAi : MonoBehaviour
             {
                 animator.Play(block.AnimationName);
             }
+
             if (block.Sound != null)
             {
                 if (audioSource != null)
