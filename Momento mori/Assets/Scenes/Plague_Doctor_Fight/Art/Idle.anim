@@ -29,17 +29,6 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 2
-  - serializedVersion: 2
-    curve:
-    - time: 0
-      value: {fileID: -678121614, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.016666668
-      value: {fileID: -1696629712, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    attribute: m_Sprite
-    path: Outline
-    classID: 212
-    script: {fileID: 0}
-    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -56,18 +45,7 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 2294442873
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -678121614, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - {fileID: -1696629712, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: -678121614, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: -1696629712, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
   m_AnimationClipSettings:
