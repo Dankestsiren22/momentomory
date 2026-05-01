@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1718838103, guid: a0ff6fcdf9f07dc4e8aceec04222f13d, type: 3}
+    - target: {fileID: 1364551127160518119, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: AttackSequences.Array.data[0].Blocks.Array.data[0].AnimationName
+      value: Leech-Swipe
+      objectReference: {fileID: 0}
     - target: {fileID: 2564903181976602559, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_Controller
       value: 
@@ -239,6 +243,30 @@ PrefabInstance:
     - target: {fileID: 2872097820442727771, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5160594
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.772989
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.3012547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335394737284679220, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4308781080176668197, guid: a468cbc5bf1487b49b94a12338df0d94, type: 3}
       propertyPath: m_Name
