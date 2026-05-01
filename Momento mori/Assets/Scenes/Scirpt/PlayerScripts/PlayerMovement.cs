@@ -44,11 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        Vector3 temp = rb.linearVelocity;
+       /* Vector3 temp = rb.linearVelocity;
         temp.x = FBmovment * speed;
         rb.linearVelocity = (temp.x * transform.forward);
         if (!IsPaused) 
-            transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
+            transform.Rotate(0f, (RotateSpeed * Rotation), 0f);*/
     }
    
     public void Pause()
