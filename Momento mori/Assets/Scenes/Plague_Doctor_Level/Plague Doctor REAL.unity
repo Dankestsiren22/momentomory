@@ -38267,7 +38267,11 @@ PrefabInstance:
       value: Doorway_Support_Stuff (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8009987137999418058, guid: 5a96fa62f4e98ab42a5d1e44f2802b48, type: 3}
+    - {fileID: 8485173162082002552, guid: 5a96fa62f4e98ab42a5d1e44f2802b48, type: 3}
+    - {fileID: -208595431880416365, guid: 5a96fa62f4e98ab42a5d1e44f2802b48, type: 3}
+    - {fileID: -466329591000292508, guid: 5a96fa62f4e98ab42a5d1e44f2802b48, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a96fa62f4e98ab42a5d1e44f2802b48, type: 3}
       insertIndex: -1
