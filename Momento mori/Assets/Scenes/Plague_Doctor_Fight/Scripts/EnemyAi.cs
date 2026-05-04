@@ -47,4 +47,8 @@ public class EnemyAi : MonoBehaviour
         yield return new WaitForSeconds(AttackCoolDown);
         isAttacking = false;
     }
+    public void Spawn(GameObject Guy)
+    {
+        Instantiate(Guy);
+    }
 }

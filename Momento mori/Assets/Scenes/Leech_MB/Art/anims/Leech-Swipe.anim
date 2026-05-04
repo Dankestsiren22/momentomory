@@ -99,4 +99,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.46153846
+    functionName: Spawn
+    data: 
+    objectReferenceParameter: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
