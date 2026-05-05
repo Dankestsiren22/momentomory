@@ -37,18 +37,20 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        PauseMenu.enabled = false;
+        
 
         CurrentLevel = GameObject.FindGameObjectWithTag("CurrentLevel");
     }
 
     public void Update()
     {
-       /* Vector3 temp = rb.linearVelocity;
-        temp.x = FBmovment * speed;
-        rb.linearVelocity = (temp.x * transform.forward);
-        if (!IsPaused) 
-            transform.Rotate(0f, (RotateSpeed * Rotation), 0f);*/
+        if (!IsPaused)
+        {
+            transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
+            Vector3 temp = rb.linearVelocity;
+            temp.x = FBmovment * speed;
+            rb.linearVelocity = (temp.x * transform.forward);
+        }
     }
    
     public void Pause()
