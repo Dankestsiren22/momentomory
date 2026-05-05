@@ -15683,6 +15683,10 @@ PrefabInstance:
       value: Crow Memento
       objectReference: {fileID: 0}
     - target: {fileID: 6526412992145253496, guid: 9e1c9bad81621824f902e05fb4eddac3, type: 3}
+      propertyPath: SceneIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6526412992145253496, guid: 9e1c9bad81621824f902e05fb4eddac3, type: 3}
       propertyPath: Scenemanager
       value: 
       objectReference: {fileID: 2871977676305180064, guid: 26262203b4c68214cb2afa0b5945f539, type: 3}
@@ -30709,6 +30713,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3064384974904438466, guid: ad3e405037454ba458f4686022ed0b3a, type: 3}
+      propertyPath: SceneIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3064384974904438466, guid: ad3e405037454ba458f4686022ed0b3a, type: 3}
       propertyPath: Scenemanager
       value: 
       objectReference: {fileID: 2871977676305180064, guid: 26262203b4c68214cb2afa0b5945f539, type: 3}
@@ -41349,6 +41357,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cf78cfb3ab2be4aa575e395eae76a4, type: 3}
+--- !u!1001 &3784485724995293411
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.627
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.611
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412678591282262251, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140692121796704726, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
+      propertyPath: m_Name
+      value: CAndied Apricot Memento
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1923bac0f3b37643a944bd4c41ad905, type: 3}
 --- !u!1001 &4609715335096797571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41463,6 +41528,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2012fa22669f7141814e667c278b4b0, type: 3}
+--- !u!1001 &7582053475235006971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 629527157026631647, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: SceneIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385734347683949674, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113752049284588887, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: m_Name
+      value: Mourining Ring Memento
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -41484,6 +41610,8 @@ SceneRoots:
   - {fileID: 347631469}
   - {fileID: 6350907719902592568}
   - {fileID: 1647640861}
+  - {fileID: 7582053475235006971}
+  - {fileID: 3784485724995293411}
   - {fileID: 898044445}
   - {fileID: 1505720379}
   - {fileID: 1596104573}

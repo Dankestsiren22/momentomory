@@ -47,9 +47,13 @@ public class PlayerMovement : MonoBehaviour
         if (!IsPaused)
         {
             transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
-            Vector3 temp = rb.linearVelocity;
+            Vector3 temp;
             temp.x = FBmovment * speed;
-            rb.linearVelocity = (temp.x * transform.forward);
+            temp.y = rb.linearVelocity.y;
+            temp.z = rb.linearVelocity.z;
+
+
+            //rb.linearVelocity = temp(temp.x * transform.forward);
         }
     }
    
