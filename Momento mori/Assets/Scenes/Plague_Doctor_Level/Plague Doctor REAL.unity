@@ -20069,17 +20069,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130288894}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1130739451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1607074389237841358, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
+  m_PrefabInstance: {fileID: 1435369900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1130739452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1545750613987774672, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
   m_PrefabInstance: {fileID: 1435369900}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1130739451}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cb76496b3d57d4438b353edb21e344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+--- !u!143 &1130739458
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130739451}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1132414853
 Transform:
   m_ObjectHideFlags: 0
@@ -26028,6 +26058,10 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1235489170}
+    - target: {fileID: 1545750613987774672, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
+      propertyPath: Controller
+      value: 
+      objectReference: {fileID: 1130739458}
     - target: {fileID: 1607074389237841358, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -26046,7 +26080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665998087491650966, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.216
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 7665998087491650966, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26054,7 +26088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665998087491650966, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.259
+      value: -8.96
       objectReference: {fileID: 0}
     - target: {fileID: 7665998087491650966, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26095,7 +26129,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1607074389237841358, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1130739458}
   m_SourcePrefab: {fileID: 100100000, guid: 08c3b86223d39f8419ce85e4689a4e1d, type: 3}
 --- !u!1 &1439514496
 GameObject:
@@ -29730,7 +29767,7 @@ Transform:
   m_GameObject: {fileID: 1596104571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.06934822, z: -0, w: 0.9975925}
-  m_LocalPosition: {x: 2.941, y: -4.041, z: -7.274}
+  m_LocalPosition: {x: 2.941, y: 0.93, z: -7.274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41584,7 +41621,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mourining Ring Memento
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1749324363550784042, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

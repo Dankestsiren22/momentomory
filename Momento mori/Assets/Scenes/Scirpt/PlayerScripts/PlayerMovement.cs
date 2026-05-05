@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Controls controls;
+    public CharacterController Controller;
     Rigidbody rb;
 
     public GameObject CurrentLevel;
@@ -47,13 +48,10 @@ public class PlayerMovement : MonoBehaviour
         if (!IsPaused)
         {
             transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
-            Vector3 temp;
-            temp.x = FBmovment * speed;
-            temp.y = rb.linearVelocity.y;
-            temp.z = rb.linearVelocity.z;
 
+            Vector3 moveDirection = transform.forward * FBmovment * speed;
 
-            //rb.linearVelocity = temp(temp.x * transform.forward);
+            Controller.SimpleMove(moveDirection);
         }
     }
    
