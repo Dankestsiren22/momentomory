@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.8805031, g: 0.2132035, b: 0.3445489, a: 1}
+    m_SelectedColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1041,12 +1041,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2871977676305180064, guid: 26262203b4c68214cb2afa0b5945f539, type: 3}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: PlagueDoctor
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
