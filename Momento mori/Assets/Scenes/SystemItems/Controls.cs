@@ -265,7 +265,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5c0b025b-7b29-4b5b-a168-feb2dfc909f4"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/trigger"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -276,7 +276,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""27e79960-e77c-40d0-beac-96ba427772eb"",
-                    ""path"": """",
+                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
