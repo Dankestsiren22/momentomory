@@ -7,7 +7,7 @@ public class cursor : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        control = new Controls();
     }
 
     // Update is called once per frame
