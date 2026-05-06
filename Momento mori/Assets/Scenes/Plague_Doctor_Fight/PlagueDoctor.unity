@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 1337739212578544758}
   - component: {fileID: 4308781079823576713}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Plague Doctor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,9 +796,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb1787dff8ac234e9eec01e7c5f77e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
+  MaxHealth: 10
   CurrentHealth: 0
   AttackCoolDown: 0
+  Atc: 0
   animator: {fileID: 2564903181555877650}
   audioSource: {fileID: 0}
   AttackSequences:
@@ -806,41 +807,33 @@ MonoBehaviour:
     Blocks:
     - AnimationName: Swipe
       AnimationLength: 0.8
-      HitBox: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
       Sound: {fileID: 0}
     - AnimationName: ReverseSwipe
       AnimationLength: 0.8
-      HitBox: {fileID: 7349025973841441243, guid: e688248263ec8ac40943212113afd669, type: 3}
       Sound: {fileID: 0}
   - Name: Sequence 2
     Blocks:
     - AnimationName: Swipe
       AnimationLength: 0.8
-      HitBox: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
       Sound: {fileID: 0}
     - AnimationName: Straight
       AnimationLength: 0.7
-      HitBox: {fileID: 857249797956302098, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
       Sound: {fileID: 0}
   - Name: Sequence 3
     Blocks:
     - AnimationName: ReverseSwipe
       AnimationLength: 0.8
-      HitBox: {fileID: 7349025973841441243, guid: e688248263ec8ac40943212113afd669, type: 3}
       Sound: {fileID: 0}
     - AnimationName: Swipe
       AnimationLength: 0.8
-      HitBox: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
       Sound: {fileID: 0}
   - Name: Sequence 4
     Blocks:
     - AnimationName: Straight
       AnimationLength: 0.7
-      HitBox: {fileID: 857249797956302098, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
       Sound: {fileID: 0}
     - AnimationName: Straight
       AnimationLength: 0.7
-      HitBox: {fileID: 857249797956302098, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
       Sound: {fileID: 0}
 --- !u!1 &4535908173868830926
 GameObject:
@@ -875,9 +868,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 3214187341418958873, guid: 4feb5d18b2b7d124ebc05c94e4ce6c15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1099
+      objectReference: {fileID: 0}
     - target: {fileID: 3883791421955158283, guid: 4feb5d18b2b7d124ebc05c94e4ce6c15, type: 3}
       propertyPath: m_Name
       value: GUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023629955955865478, guid: 4feb5d18b2b7d124ebc05c94e4ce6c15, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7995333973321913823, guid: 4feb5d18b2b7d124ebc05c94e4ce6c15, type: 3}
       propertyPath: m_Camera
@@ -977,12 +978,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 504873684404932003, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
+      propertyPath: Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 504873684404932003, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
       propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 504873684404932003, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
+      propertyPath: MaxHealth
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3520338461022193842, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
       propertyPath: m_Name
       value: player (combat)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580582418870795104, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580582418870795104, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 3580582418870795104, guid: c98292d31525c3d4d8b0bc3b387a76f6, type: 3}
       propertyPath: m_LocalPosition.x

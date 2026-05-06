@@ -18,6 +18,7 @@ public class CombatMovement : MonoBehaviour
     public float parrycooldown;
     public int DamageDelt;
 
+    public int MaxHealth;
     public int health;
     private void OnEnable() => controls.Enable();
     private void OnDisable()
@@ -92,10 +93,14 @@ public class CombatMovement : MonoBehaviour
             CanParry = true;
             transform.gameObject.tag = "Player";
         }
-        /*else if (other.tag == "ParryableAttack")
+        else if (other.tag == "ParryableAttack")
         {
-            Damage();
-        }*/
+            health = health - 2;
+        }
+        else if (other.tag == "Unparryable")
+        {
+            health--; 
+        }
     }
 
     IEnumerator ParryWindow()

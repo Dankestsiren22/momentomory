@@ -6,7 +6,8 @@ public class EnemyAi : MonoBehaviour
 {
     public int MaxHealth;
     public int CurrentHealth;
-    public float AttackCoolDown;
+    public float AttackCoolDown = 2f;
+    public int Atc = 2;
     public Animator animator;
     public AudioSource audioSource;
     public List<Sequence> AttackSequences;
@@ -14,15 +15,17 @@ public class EnemyAi : MonoBehaviour
     void Start()
     {
         CurrentHealth = MaxHealth;
+        StartCoroutine(PlaySequenceCoolDown());
     }
 
     public void Attack()
     {
-        if (isAttacking) return;
+        if (isAttacking == true) return;
         if (AttackSequences == null || AttackSequences.Count == 0) return;
 
         Sequence chosenSequence = AttackSequences[Random.Range(0, AttackSequences.Count)];
         StartCoroutine(PlaySequence(chosenSequence));
+
     }
 
     IEnumerator PlaySequence(Sequence sequence)
@@ -44,8 +47,19 @@ public class EnemyAi : MonoBehaviour
             }
             yield return new WaitForSeconds(block.AnimationLength + .1f);
         }
-        yield return new WaitForSeconds(AttackCoolDown);
+        yield return new WaitForSeconds(Atc);
         isAttacking = false;
+        Attack();
+    }
+    IEnumerator PlaySequenceCoolDown()
+    {
+        while (AttackCoolDown > 0)
+        {
+            AttackCoolDown = AttackCoolDown - .1f;
+            yield return new WaitForSeconds(1);
+        }
+        AttackCoolDown = 0;
+        Attack();
     }
     public void Spawn(GameObject Guy)
     {
