@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Plague_Doctor_Fight/PlagueDoctor.unity
     guid: d2ee7a2aaec0a574388b9fd2e422777f
+  - enabled: 1
+    path: Assets/Scenes/Death/DeadScreen.unity
+    guid: 0595037ad86c78e4ea1da0dbb725b2f6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 1836b2f21238ef740a33120c81577957, type: 3}
   m_UseUCBPForAssetBundles: 0

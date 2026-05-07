@@ -107,7 +107,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: 
+    functionName: Spawn
     data: 
     objectReferenceParameter: {fileID: 2828592573755007353, guid: a48a9da0aa3421349b841fb4b7fa5468, type: 3}
     floatParameter: 0

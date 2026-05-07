@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CombatMovement : MonoBehaviour
 {
@@ -58,6 +59,7 @@ public class CombatMovement : MonoBehaviour
         if (health <= 0)
         {
             IsDead = true;
+            SceneManager.LoadScene(7);
         }
         if (IsDead == true)
         {
