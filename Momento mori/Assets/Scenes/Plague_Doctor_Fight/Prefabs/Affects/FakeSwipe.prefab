@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657327066839953917}
   - component: {fileID: 1811023715069695053}
-  - component: {fileID: -6867775486766364671}
+  - component: {fileID: 3058828376085759259}
   m_Layer: 0
   m_Name: FakeSwipe
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2828592573755007353}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.09000135, w: 0.9959417}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08999812, w: 0.99594194}
   m_LocalPosition: {x: -7.01, y: -0.5, z: 0}
   m_LocalScale: {x: 0.64591, y: 0.66988, z: 1}
   m_ConstrainProportionsScale: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6867775486766364671
+--- !u!114 &3058828376085759259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +97,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2828592573755007353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8718e537b424da343a53707bf5728829, type: 3}
+  m_Script: {fileID: 11500000, guid: afb1db447b42f83469d86038e78032f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0.5
+  position: {x: -7.01, y: -0.5, z: 0}
+  rotation: {x: 0, y: 0, z: -0.08999813, w: 0.99594194}

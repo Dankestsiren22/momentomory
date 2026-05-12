@@ -22,6 +22,7 @@ public class Memento : MonoBehaviour
     }
     public void Scence()
     {
+        
         SceneManager.LoadScene(SceneIndex);
     }
     private void OnTriggerEnter(Collider other)

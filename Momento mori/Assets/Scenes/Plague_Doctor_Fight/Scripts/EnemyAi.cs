@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class EnemyAi : MonoBehaviour
     {
         CurrentHealth = MaxHealth;
         StartCoroutine(PlaySequenceCoolDown());
+    }
+    private void Update()
+    {
+        if (CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void Attack()
@@ -63,6 +71,6 @@ public class EnemyAi : MonoBehaviour
     }
     public void Spawn(GameObject Guy)
     {
-        Instantiate(Guy);
+        GameObject g = Instantiate(Guy);
     }
 }

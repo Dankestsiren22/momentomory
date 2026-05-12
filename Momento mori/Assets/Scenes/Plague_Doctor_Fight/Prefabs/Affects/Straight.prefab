@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3124710334038079705}
   - component: {fileID: 7608609011618746576}
   - component: {fileID: 4493214629838761924}
-  - component: {fileID: 7351221778169154045}
+  - component: {fileID: 1750047998453009850}
   m_Layer: 0
   m_Name: Straight
   m_TagString: ParryableAttack
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16.49, y: 20.48}
   m_EdgeRadius: 0
---- !u!114 &7351221778169154045
+--- !u!114 &1750047998453009850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 857249797956302098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49e5ea3fb3735943acf696f0c8b5706, type: 3}
+  m_Script: {fileID: 11500000, guid: 58c2d840f19c34c4a8ebb3794d236db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0.7
+  position: {x: -6.35, y: -7.08, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
