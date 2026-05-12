@@ -20,17 +20,11 @@ public class Memento : MonoBehaviour
             transform.LookAt(transform.position + cameraTransform.rotation * Vector3.forward, cameraTransform.rotation * Vector3.up);
         }
     }
-    public void Scence()
-    {
-        
-        SceneManager.LoadScene(SceneIndex);
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             Destroy(gameObject);
-            Scence();
         }
 
     }

@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     Controls controls;
     public CharacterController Controller;
+    public PlayerData data;
 
-
-    public GameObject PauseMenu;
+    public Canvas PauseMenu;
 
     public int MaxMementos = 3;
     public int CurrentMementos;
@@ -28,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.TurningLR_Movement.performed += ctx => Rotation = ctx.ReadValue<float>();
         controls.Player.TurningLR_Movement.canceled += _ => Rotation = 0;
         controls.Player.PauseInventory.started += _ => Pause();
-        PauseMenu.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        PauseMenu.enabled =(false);
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Update()
@@ -51,17 +52,37 @@ public class PlayerMovement : MonoBehaviour
         if(IsPaused == true)
         {
             Time.timeScale = 0;
-            PauseMenu.SetActive(true);
+            PauseMenu.enabled = (true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else if ( IsPaused == false)
         {
             Time.timeScale = 1;
-            PauseMenu.SetActive(false);
+            PauseMenu.enabled = (false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Memento")
+        {
+            
+            memento();
+            data.SavePlayer();
+            
+        }
+    }
+    public void memento()
+    {
+        if (data.Memento1 == false)
+            data.Memento1 = true;
+        else if (data.Memento2 == false)
+            data.Memento2 = true;
+        else if (data.Memento3 == false)
+            data.Memento3 = true;
+        else if (data.Memento4 == false)
+            data.Memento4 = true;
+    }
 }

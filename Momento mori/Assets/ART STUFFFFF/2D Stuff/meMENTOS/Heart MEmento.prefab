@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225658015340555639}
   - component: {fileID: 4214453661655431991}
+  - component: {fileID: 1638079049153787779}
   - component: {fileID: 4569403523361400452}
   - component: {fileID: 3064384974904438466}
   m_Layer: 0
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 5954797724967969866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.32908, y: 0, z: 46.25723}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 44.98, y: -3.76, z: -7.1574507}
+  m_LocalScale: {x: 0.06921301, y: 0.06797191, z: 0.045}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,6 +57,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1638079049153787779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954797724967969866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20.48, y: 20.48, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &4569403523361400452
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,4 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c69acf88ac8284e97f17f70775fc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scenemanager: {fileID: 0}
+  SceneIndex: 6

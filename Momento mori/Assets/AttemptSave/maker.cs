@@ -8,13 +8,24 @@ public class maker : MonoBehaviour
     public GameObject M4;
     public GameObject Player;
     public PlayerData playerData;
-    void Start()
+    void Awake()
     {
-        Instantiate(M1);
-        Instantiate(M2);
-        Instantiate(M3);
-        Instantiate(Player);
+        playerData.SavePlayer();
         playerData.LoadPlayer();
+
+        if (playerData.Memento1 == false)
+            Instantiate(M1);
+
+        if (playerData.Memento1 == false)
+            Instantiate(M2);
+
+        if (playerData.Memento1 == false)
+            Instantiate(M3);
+
+        if (playerData.Memento1 == false)
+            Instantiate(M4);
+
+        Instantiate(Player);
     }
 
 }

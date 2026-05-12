@@ -9,7 +9,6 @@ public class PlayerData : MonoBehaviour
     public bool Memento2;
     public bool Memento3;
     public bool Memento4;
-    public float position;
 
 
     public void SavePlayer()
