@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnEnable()
     {
-        
+        controls.Enable();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        controls.Disable();
+    }
+    Controls controls;
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        controls = new Controls();
+        controls.Player.ParrySelect.started += _ => SceneManager.LoadScene(2);
+        controls.Player.PauseInventory.started += _ => SceneManager.LoadScene(0);
     }
 }
