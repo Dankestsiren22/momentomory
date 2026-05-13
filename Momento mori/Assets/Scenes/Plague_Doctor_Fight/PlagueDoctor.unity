@@ -1173,10 +1173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb1787dff8ac234e9eec01e7c5f77e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
-  CurrentHealth: 0
+  MaxHealth: 8
+  CurrentHealth: 8
   AttackCoolDown: 0
-  Atc: 0
+  Atc: 2
   animator: {fileID: 2564903181555877650}
   audioSource: {fileID: 0}
   AttackSequences:
@@ -1689,8 +1689,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1983626958}
-  - {fileID: 2872097820863485430}
   - {fileID: 8683323267554925118}
+  - {fileID: 2872097820863485430}
   - {fileID: 2550956807607022128}
   - {fileID: 233584928}
   - {fileID: 721315160796996777}

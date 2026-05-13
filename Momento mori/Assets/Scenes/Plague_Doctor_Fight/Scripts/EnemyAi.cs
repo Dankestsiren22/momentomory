@@ -53,7 +53,7 @@ public class EnemyAi : MonoBehaviour
                 else
                     AudioSource.PlayClipAtPoint(block.Sound, transform.position);
             }
-            yield return new WaitForSeconds(block.AnimationLength + .1f);
+            yield return new WaitForSeconds(block.AnimationLength);
         }
         yield return new WaitForSeconds(Atc);
         isAttacking = false;

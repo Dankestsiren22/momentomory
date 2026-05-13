@@ -447,7 +447,7 @@ MonoBehaviour:
   FBmovment: 0
   Rotation: 0
   speed: 5
-  RotateSpeed: 0.25
+  RotateSpeed: 1.2
 --- !u!143 &8964763601900052085
 CharacterController:
   m_ObjectHideFlags: 0
@@ -664,7 +664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &802578426170723930
 RectTransform:
   m_ObjectHideFlags: 0

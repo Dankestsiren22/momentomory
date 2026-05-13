@@ -25,6 +25,7 @@ public class Memento : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneIndex);
         }
 
     }

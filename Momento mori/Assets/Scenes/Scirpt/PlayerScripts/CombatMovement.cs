@@ -37,7 +37,7 @@ public class CombatMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         controls = new Controls();
         CanParry = true;
-        controls.Player.UDFB_Movement.performed += ctx => UD_Movement = ctx.ReadValue<float>();
+     
         controls.Player.UDFB_Movement.canceled += _ => UD_Movement = 0;
         //DeathMenu = GameObject.Find("DeathCanvas").GetComponent<Canvas>();
         controls.Player.TurningLR_Movement.performed += ctx => LR_Movement = ctx.ReadValue<float>();
@@ -81,12 +81,6 @@ public class CombatMovement : MonoBehaviour
         }
         
     }
-
-    public void Damage()
-    {
-        health--;
-    }
-
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (transform.gameObject.tag == "ActiveParry" & other.CompareTag("ParryableAttack"))
