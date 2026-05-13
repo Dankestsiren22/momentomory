@@ -73,6 +73,11 @@ public class PlayerMovement : MonoBehaviour
             data.SavePlayer();
             
         }
+
+        if (other.tag == "Elimination Area")
+        {
+            SceneManager.LoadScene(7);
+        }
     }
     public void memento()
     {

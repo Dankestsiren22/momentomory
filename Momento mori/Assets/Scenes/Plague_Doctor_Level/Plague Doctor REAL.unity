@@ -24779,8 +24779,8 @@ GameObject:
   - component: {fileID: 855336237}
   - component: {fileID: 855336236}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Death Box
+  m_TagString: Elimination Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
