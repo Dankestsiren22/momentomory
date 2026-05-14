@@ -10,6 +10,10 @@ public class maker : MonoBehaviour
     public PlayerData playerData;
     void Awake()
     {
+        if (M1 && M2 && M3 && M4 == false)
+        {
+
+        }
         playerData.SavePlayer();
         playerData.LoadPlayer();
 
