@@ -447,7 +447,7 @@ MonoBehaviour:
   FBmovment: 0
   Rotation: 0
   speed: 5
-  RotateSpeed: 1.2
+  RotateSpeed: 0.5
 --- !u!143 &8964763601900052085
 CharacterController:
   m_ObjectHideFlags: 0
