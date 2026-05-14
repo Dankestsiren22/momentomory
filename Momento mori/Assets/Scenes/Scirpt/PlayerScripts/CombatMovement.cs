@@ -6,18 +6,15 @@ public class CombatMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     Controls controls;
-    public bool IsDead;
     public int Speed;
     public float UD_Movement;
     public float LR_Movement;
-    //Canvas DeathMenu;
     
     Animator animator;
     
     public bool CanParry;
     public float parryWindow;
     public float parrycooldown;
-    public int DamageDelt;
 
     public int MaxHealth;
     public int health;
@@ -37,15 +34,12 @@ public class CombatMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         controls = new Controls();
         CanParry = true;
-     
+        controls.Player.UDFB_Movement.performed += ctx => UD_Movement = ctx.ReadValue<float>();
         controls.Player.UDFB_Movement.canceled += _ => UD_Movement = 0;
-        //DeathMenu = GameObject.Find("DeathCanvas").GetComponent<Canvas>();
         controls.Player.TurningLR_Movement.performed += ctx => LR_Movement = ctx.ReadValue<float>();
         controls.Player.TurningLR_Movement.canceled += _ => LR_Movement = 0;
 
         controls.Player.ParrySelect.started += _ => parry();
-        //DeathMenu.enabled = false;
-        IsDead = false;
     }
     void FixedUpdate()
     {
@@ -53,21 +47,6 @@ public class CombatMovement : MonoBehaviour
         if (input.sqrMagnitude > 1)
             input = input.normalized;
         rb.linearVelocity = input * Speed;
-    }
-    private void Update()
-    {
-        if (health <= 0)
-        {
-            IsDead = true;
-            SceneManager.LoadScene(7);
-        }
-        if (IsDead == true)
-        {
-            //DeathMenu.enabled = true;
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
     }
     public void parry()
     {

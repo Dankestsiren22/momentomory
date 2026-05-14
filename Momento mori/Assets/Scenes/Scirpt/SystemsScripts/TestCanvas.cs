@@ -12,9 +12,5 @@ public class TestCanvas : MonoBehaviour
         text = GameObject.Find("text").GetComponent<TextMeshProUGUI>();
         Player = GameObject.Find("Player").GetComponent<CombatMovement>();
     }
-    public void FixedUpdate()
-    {
-        text.text = "Damage Dealt:" + " " + Player.DamageDelt;
-    }
 
 }
