@@ -220,8 +220,30 @@
                 },
                 {
                     "name": "",
+                    "id": "e6cf4c6a-a607-4552-ae5d-526bf211df90",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause/Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ffe36a8e-881f-45d0-a019-1350ca59b9ca",
                     "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df30338d-6342-4a10-a988-cc495873bd0f",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button9",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

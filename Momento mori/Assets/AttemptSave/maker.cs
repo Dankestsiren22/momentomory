@@ -10,23 +10,23 @@ public class maker : MonoBehaviour
     public PlayerData playerData;
     void Awake()
     {
-        if (M1 && M2 && M3 && M4 == false)
+        if (M1 == false && M2 == false && M3 == false && M4 == false)
         {
+            playerData.SavePlayer();
 
         }
-        playerData.SavePlayer();
         playerData.LoadPlayer();
 
         if (playerData.Memento1 == false)
             Instantiate(M1);
 
-        if (playerData.Memento1 == false)
+        if (playerData.Memento2 == false)
             Instantiate(M2);
 
-        if (playerData.Memento1 == false)
+        if (playerData.Memento3 == false)
             Instantiate(M3);
 
-        if (playerData.Memento1 == false)
+        if (playerData.Memento4 == false)
             Instantiate(M4);
 
         Instantiate(Player);

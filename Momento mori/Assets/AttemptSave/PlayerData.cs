@@ -10,7 +10,6 @@ public class PlayerData : MonoBehaviour
     public bool Memento3;
     public bool Memento4;
 
-
     public void SavePlayer()
     {
         PlayerSaveLoadFunctions.SavePlayer(this);
@@ -24,11 +23,5 @@ public class PlayerData : MonoBehaviour
         Memento2 = data.Memento2;
         Memento3 = data.Memento3;
         Memento4 = data.Memento4;
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
-
     }
 }
