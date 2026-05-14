@@ -446,8 +446,8 @@ MonoBehaviour:
   IsPaused: 0
   FBmovment: 0
   Rotation: 0
-  speed: 5
-  RotateSpeed: 1.2
+  speed: 3
+  RotateSpeed: 5
 --- !u!143 &8964763601900052085
 CharacterController:
   m_ObjectHideFlags: 0

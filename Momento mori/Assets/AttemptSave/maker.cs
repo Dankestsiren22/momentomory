@@ -10,12 +10,12 @@ public class maker : MonoBehaviour
     public PlayerData playerData;
     void Awake()
     {
-        if (M1 == false && M2 == false && M3 == false && M4 == false)
-        {
-            playerData.SavePlayer();
 
-        }
-        playerData.LoadPlayer();
+
+
+        playerData.SavePlayer();
+
+
 
         if (playerData.Memento1 == false)
             Instantiate(M1);
@@ -30,6 +30,10 @@ public class maker : MonoBehaviour
             Instantiate(M4);
 
         Instantiate(Player);
+    }
+    private void Start()
+    {
+      playerData.LoadPlayer();
     }
 
 }
