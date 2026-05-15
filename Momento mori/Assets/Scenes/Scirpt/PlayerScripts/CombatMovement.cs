@@ -88,4 +88,17 @@ public class CombatMovement : MonoBehaviour
         yield return new WaitForSeconds(parrycooldown);
         CanParry = true;
     }
+
+
+    private void Update()
+    {
+        if (health == 0)
+        {
+            SceneManager.LoadScene(7);
+        }
+
+
+    }
+        
+    
 }
