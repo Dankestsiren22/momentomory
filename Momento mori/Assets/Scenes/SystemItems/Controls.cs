@@ -127,15 +127,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Quit"",
-                    ""type"": ""Button"",
-                    ""id"": ""af214b44-eece-4507-bf44-e2b102fbeccb"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,39 +156,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""positive"",
                     ""id"": ""2a581e40-891d-4189-b6e3-78c9925edf1b"",
                     ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UD/FB_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""7b98fd37-15fb-4cb4-8b31-d96903bbd6d0"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UD/FB_Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""e3ac6fff-1974-4536-bf6f-be9bf78fce3f"",
-                    ""path"": ""<Joystick>/stick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UD/FB_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""6eae71ec-c542-4304-9e3d-544866a9eed7"",
-                    ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -239,39 +197,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""5d86c41d-569e-430d-8e11-f40101ad5bec"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Turning/LR_Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""d4817f9e-6446-44e3-a036-1db882e5fd74"",
-                    ""path"": ""<Joystick>/stick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Turning/LR_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""a3655af3-fe0d-4079-b14f-e6ff9ee70139"",
-                    ""path"": ""<Joystick>/stick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Turning/LR_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""5c0b025b-7b29-4b5b-a168-feb2dfc909f4"",
                     ""path"": ""<Keyboard>/e"",
@@ -284,56 +209,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""27e79960-e77c-40d0-beac-96ba427772eb"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Parry/Select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3b4b094c-2b7b-4d2d-8a17-53ecabe9c7a4"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause/Inventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""e6cf4c6a-a607-4552-ae5d-526bf211df90"",
-                    ""path"": ""<Keyboard>/v"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause/Inventory"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ffe36a8e-881f-45d0-a019-1350ca59b9ca"",
-                    ""path"": ""<Keyboard>/backquote"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Quit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""df30338d-6342-4a10-a988-cc495873bd0f"",
-                    ""path"": ""<HID::DragonRise Inc.   Generic   USB  Joystick  >/button9"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -348,7 +229,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_TurningLR_Movement = m_Player.FindAction("Turning/LR_Movement", throwIfNotFound: true);
         m_Player_ParrySelect = m_Player.FindAction("Parry/Select", throwIfNotFound: true);
         m_Player_PauseInventory = m_Player.FindAction("Pause/Inventory", throwIfNotFound: true);
-        m_Player_Quit = m_Player.FindAction("Quit", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -433,7 +313,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_TurningLR_Movement;
     private readonly InputAction m_Player_ParrySelect;
     private readonly InputAction m_Player_PauseInventory;
-    private readonly InputAction m_Player_Quit;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -461,10 +340,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/PauseInventory".
         /// </summary>
         public InputAction @PauseInventory => m_Wrapper.m_Player_PauseInventory;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Quit".
-        /// </summary>
-        public InputAction @Quit => m_Wrapper.m_Player_Quit;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -503,9 +378,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseInventory.started += instance.OnPauseInventory;
             @PauseInventory.performed += instance.OnPauseInventory;
             @PauseInventory.canceled += instance.OnPauseInventory;
-            @Quit.started += instance.OnQuit;
-            @Quit.performed += instance.OnQuit;
-            @Quit.canceled += instance.OnQuit;
         }
 
         /// <summary>
@@ -529,9 +401,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @PauseInventory.started -= instance.OnPauseInventory;
             @PauseInventory.performed -= instance.OnPauseInventory;
             @PauseInventory.canceled -= instance.OnPauseInventory;
-            @Quit.started -= instance.OnQuit;
-            @Quit.performed -= instance.OnQuit;
-            @Quit.canceled -= instance.OnQuit;
         }
 
         /// <summary>
@@ -600,12 +469,5 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPauseInventory(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Quit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnQuit(InputAction.CallbackContext context);
     }
 }
