@@ -12,6 +12,6 @@ public class CombatUiManager : MonoBehaviour
     void Update()
     {
         BossHp.fillAmount = (float)Boss.CurrentHealth/(float)Boss.MaxHealth;
-        PlayerHp.fillAmount = (float)Player.health/(float)Player.MaxHealth;
+        PlayerHp.fillAmount = (float)Player.Health/(float)Player.MaxHealth;
     }
 }

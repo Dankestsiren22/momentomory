@@ -6,18 +6,19 @@ public class CombatMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     Controls controls;
+    Animator animator;
+
+    public int MaxHealth;
+    public int Health;
     public int Speed;
+
     public float UD_Movement;
     public float LR_Movement;
-    
-    Animator animator;
     
     public bool CanParry;
     public float parryWindow;
     public float parrycooldown;
 
-    public int MaxHealth;
-    public int health;
     private void OnEnable() => controls.Enable();
     private void OnDisable()
     {
@@ -36,8 +37,11 @@ public class CombatMovement : MonoBehaviour
         CanParry = true;
         controls.Player.UDFB_Movement.performed += ctx => UD_Movement = ctx.ReadValue<float>();
         controls.Player.UDFB_Movement.canceled += _ => UD_Movement = 0;
+
         controls.Player.TurningLR_Movement.performed += ctx => LR_Movement = ctx.ReadValue<float>();
         controls.Player.TurningLR_Movement.canceled += _ => LR_Movement = 0;
+
+        controls.Player.PauseInventory.started += _ => pause();
 
         controls.Player.ParrySelect.started += _ => parry();
     }
@@ -70,11 +74,11 @@ public class CombatMovement : MonoBehaviour
         }
         else if (other.tag == "ParryableAttack")
         {
-            health = health - 2;
+            Health = Health - 2;
         }
         else if (other.tag == "Unparryable")
         {
-            health--; 
+            Health--; 
         }
     }
 
@@ -92,7 +96,7 @@ public class CombatMovement : MonoBehaviour
 
     private void Update()
     {
-        if (health == 0)
+        if (Health == 0)
         {
             SceneManager.LoadScene(7);
         }
@@ -100,5 +104,8 @@ public class CombatMovement : MonoBehaviour
 
     }
         
-    
+    public void pause()
+    {
+
+    }
 }
