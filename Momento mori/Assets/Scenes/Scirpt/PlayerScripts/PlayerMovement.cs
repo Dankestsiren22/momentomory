@@ -29,9 +29,9 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.TurningLR_Movement.performed += ctx => Rotation = ctx.ReadValue<float>();
         controls.Player.TurningLR_Movement.canceled += _ => Rotation = 0;
         controls.Player.PauseInventory.started += _ => Pause();
-        PauseMenu.enabled =(false);
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
+        PauseMenu.enabled = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Update()

@@ -18,4 +18,8 @@ public class SceneManagement: MonoBehaviour
         data.SavePlayer();
         SceneManager.LoadScene(2);
     }
+    public void quit()
+    {
+        Application.Quit();
+    }
 }

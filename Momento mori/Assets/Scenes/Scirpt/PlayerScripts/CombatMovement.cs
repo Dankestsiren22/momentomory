@@ -7,6 +7,7 @@ public class CombatMovement : MonoBehaviour
     Rigidbody2D rb;
     Controls controls;
     Animator animator;
+    public Canvas PauseMenu;
 
     public int MaxHealth;
     public int Health;
@@ -18,6 +19,7 @@ public class CombatMovement : MonoBehaviour
     public bool CanParry;
     public float parryWindow;
     public float parrycooldown;
+    public bool IsPaused;
 
     private void OnEnable() => controls.Enable();
     private void OnDisable()
@@ -27,7 +29,7 @@ public class CombatMovement : MonoBehaviour
 
     public void Awake()
     {
-        
+
         animator = GetComponent<Animator>();
 
 
@@ -44,6 +46,10 @@ public class CombatMovement : MonoBehaviour
         controls.Player.PauseInventory.started += _ => pause();
 
         controls.Player.ParrySelect.started += _ => parry();
+
+        PauseMenu.enabled = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void FixedUpdate()
     {
@@ -103,9 +109,23 @@ public class CombatMovement : MonoBehaviour
 
 
     }
-        
+
     public void pause()
     {
-
+        IsPaused = !IsPaused;
+        if (IsPaused == true)
+        {
+            Time.timeScale = 0;
+            PauseMenu.enabled = (true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (IsPaused == false)
+        {
+            Time.timeScale = 1;
+            PauseMenu.enabled = (false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
