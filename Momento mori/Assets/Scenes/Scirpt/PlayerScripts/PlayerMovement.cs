@@ -7,14 +7,14 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController Controller;
     public PlayerData data;
 
-    public Canvas PauseMenu;
+    public GameObject PauseMenu;
 
     public int MaxMementos = 3;
     public int CurrentMementos;
     public bool IsPaused;
 
     public float FBmovment;
-    public float Rotation;
+    public float UDmovment;
     public float speed;
     public float RotateSpeed;
 
@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable() => controls.Disable();
     public void Awake()
     {
-        
+        PauseMenu = GameObject.Find("PauseMenu");
         controls = new Controls();
         controls.Player.UDFB_Movement.performed += ctx => FBmovment = ctx.ReadValue<float>();
         controls.Player.UDFB_Movement.canceled += _ => FBmovment = 0;
-        controls.Player.TurningLR_Movement.performed += ctx => Rotation = ctx.ReadValue<float>();
-        controls.Player.TurningLR_Movement.canceled += _ => Rotation = 0;
+        controls.Player.TurningLR_Movement.performed += ctx => UDmovment = ctx.ReadValue<float>();
+        controls.Player.TurningLR_Movement.canceled += _ => UDmovment = 0;
         controls.Player.PauseInventory.started += _ => Pause();
-        PauseMenu.enabled = false;
+        PauseMenu.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -38,11 +38,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!IsPaused)
         {
-            transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
+            //transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
 
-            Vector3 moveDirection = transform.forward * FBmovment * speed;
+            Vector3 moveDirection = (transform.forward * FBmovment + transform.right * UDmovment) * speed;
 
             Controller.SimpleMove(moveDirection);
+
         }
     }
    
@@ -52,14 +53,14 @@ public class PlayerMovement : MonoBehaviour
         if(IsPaused == true)
         {
             Time.timeScale = 0;
-            PauseMenu.enabled = (true);
+            PauseMenu.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else if ( IsPaused == false)
         {
             Time.timeScale = 1;
-            PauseMenu.enabled = (false);
+            PauseMenu.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
