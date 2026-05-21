@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8526080315553589374}
   - component: {fileID: 2842288071338356016}
-  - component: {fileID: 8792216699884026855}
   - component: {fileID: 5967613418209446685}
+  - component: {fileID: 2266903087978899878}
   m_Layer: 0
   m_Name: Swipe
   m_TagString: Unparryable
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 5520163964098279471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.08999812, w: 0.99594194}
-  m_LocalPosition: {x: -7.01, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.64591, y: 0.66988, z: 1}
+  m_LocalPosition: {x: -0.7618, y: -1.7283, z: 0}
+  m_LocalScale: {x: 0.7539062, y: 0.66988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,8 +89,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8792216699884026855
-CircleCollider2D:
+--- !u!114 &5967613418209446685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5520163964098279471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb1db447b42f83469d86038e78032f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.5
+  position: {x: -0.7618, y: -1.7283, z: 0}
+  rotation: {x: 0, y: 0, z: -0.08999813, w: 0.99594194}
+--- !u!68 &2266903087978899878
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,24 +134,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.06, y: 4}
-  m_Radius: 10.54
---- !u!114 &5967613418209446685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5520163964098279471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb1db447b42f83469d86038e78032f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0.5
-  position: {x: -7.01, y: -0.5, z: 0}
-  rotation: {x: 0, y: 0, z: -0.08999813, w: 0.99594194}
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -10.24, y: 0}
+  - {x: -10.7536335, y: -5.4440017}
+  - {x: -10.394534, y: -5.918042}
+  - {x: -9.697377, y: -6.4808273}
+  - {x: -8.86062, y: -6.980265}
+  - {x: -4.138629, y: -6.9646807}
+  - {x: 1.3427604, y: -6.694615}
+  - {x: 2.9580193, y: -6.12501}
+  - {x: 4.716211, y: -5.656011}
+  - {x: 8.80275, y: -3.730317}
+  - {x: 12.394803, y: 4.673098}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

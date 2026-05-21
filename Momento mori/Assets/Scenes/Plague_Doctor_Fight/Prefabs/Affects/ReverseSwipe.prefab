@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7565262661337623442}
   - component: {fileID: 6598240784889750856}
-  - component: {fileID: 7824777832842478912}
   - component: {fileID: 609676037159430633}
+  - component: {fileID: 1148560404950035914}
   m_Layer: 0
   m_Name: ReverseSwipe
   m_TagString: Unparryable
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 7349025973841441243}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12618227, y: 0.99200547, z: -0.00023103175, w: 0.0017801557}
-  m_LocalPosition: {x: -5.71, y: -7.58, z: 0}
-  m_LocalScale: {x: 0.64591, y: -0.6028384, z: 1}
+  m_LocalPosition: {x: -2.6201, y: -12.9506, z: 0.0217}
+  m_LocalScale: {x: 1.0828251, y: -1.143705, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,8 +89,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7824777832842478912
-CircleCollider2D:
+--- !u!114 &609676037159430633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349025973841441243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb1db447b42f83469d86038e78032f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.5
+  position: {x: -2.6201, y: -12.9506, z: 0.0217}
+  rotation: {x: 0.12618223, y: 0.9920054, z: -0.00023101625, w: 0.0017800933}
+--- !u!68 &1148560404950035914
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,24 +134,31 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.06, y: 5}
-  m_Radius: 10.54
---- !u!114 &609676037159430633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7349025973841441243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb1db447b42f83469d86038e78032f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0.5
-  position: {x: -5.71, y: -7.58, z: 0}
-  rotation: {x: 0.12618223, y: 0.9920054, z: -0.00023101625, w: 0.0017800933}
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 10.284135, y: 0.0026023984}
+  - {x: 0.90197897, y: 0.85960025}
+  - {x: -4.7951245, y: 0.5412934}
+  - {x: -10.82264, y: -3.511869}
+  - {x: -9.249963, y: -5.5066724}
+  - {x: -8.545905, y: -6.4955792}
+  - {x: -5.9222293, y: -6.922459}
+  - {x: -4.8210597, y: -7.117061}
+  - {x: -3.7879913, y: -7.3128285}
+  - {x: -3.2417412, y: -7.335311}
+  - {x: -3.0747793, y: -7.3551025}
+  - {x: -1.5156159, y: -7.214417}
+  - {x: -0.25400156, y: -7.1985183}
+  - {x: 0.720558, y: -6.9470534}
+  - {x: 1.2668183, y: -6.711716}
+  - {x: 6.079619, y: -4.958837}
+  - {x: 10.240001, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
