@@ -9,13 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 225658015340555639}
-  - component: {fileID: 4214453661655431991}
   - component: {fileID: 1638079049153787779}
   - component: {fileID: 4569403523361400452}
   - component: {fileID: 3064384974904438466}
   m_Layer: 0
   m_Name: Heart MEmento
-  m_TagString: Untagged
+  m_TagString: Memento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,28 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4214453661655431991
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5954797724967969866}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc62247a30ad54e4dbbb9b32476785b1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!65 &1638079049153787779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -145,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c69acf88ac8284e97f17f70775fc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 6
+  loadlevel: 6

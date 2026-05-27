@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 629527157026631647, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+      propertyPath: loadlevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 629527157026631647, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
       propertyPath: SceneIndex
       value: 3
       objectReference: {fileID: 0}
@@ -72,39 +76,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Memento
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3783523193464272542, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
-    - {fileID: 1739256576906369642, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8113752049284588887, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2108223099587419846}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
---- !u!1 &8140692121796704726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8113752049284588887, guid: d7da146965cf88e4e8b93640e0e88efb, type: 3}
-  m_PrefabInstance: {fileID: 27121492608670849}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2108223099587419846
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8140692121796704726}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 20.48, y: 20.48, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}

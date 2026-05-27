@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7329308751898327562}
   - component: {fileID: 4925333334450568523}
-  - component: {fileID: 3048655493855912109}
   - component: {fileID: 6526412992145253496}
   - component: {fileID: 1365096618181870385}
   m_Layer: 0
   m_Name: Crow Memento
-  m_TagString: Untagged
+  m_TagString: Memento
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,28 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3048655493855912109
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673984273400752093}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 529932da444b4f7478753a17e645bcab, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6526412992145253496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c69acf88ac8284e97f17f70775fc01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 5
+  loadlevel: 4
 --- !u!65 &1365096618181870385
 BoxCollider:
   m_ObjectHideFlags: 0
