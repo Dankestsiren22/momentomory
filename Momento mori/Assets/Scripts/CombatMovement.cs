@@ -48,8 +48,8 @@ public class CombatMovement : MonoBehaviour
         controls.Player.ParrySelect.started += _ => parry();
 
         PauseMenu.enabled = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+       // //Cursor.visible = false;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
     void FixedUpdate()
     {
