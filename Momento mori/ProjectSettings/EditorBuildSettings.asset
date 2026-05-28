@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Main_Menu.unity
     guid: d703ecc619b4a214e9cc6fb32fdcef7a
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: ec7ffb2f7e68d954a982f08caf159638
   - enabled: 1
-    path: Assets/Scenes/Plague Doctor REAL.unity
+    path: Assets/Scenes/Plague_Doctor_Level.unity
     guid: 34a042d0d8f5ad4448fcf584d0faa7ee
   - enabled: 1
     path: Assets/Scenes/Leech1_MB.unity
@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Leech3_MB.unity
     guid: 6274652289037ef458fc5ae2b74c9201
   - enabled: 1
-    path: Assets/Scenes/PlagueDoctor.unity
+    path: Assets/Scenes/Plague_Doctor_Fight.unity
     guid: d2ee7a2aaec0a574388b9fd2e422777f
   - enabled: 1
-    path: Assets/Scenes/DeadScreen.unity
+    path: Assets/Scenes/Dead_Screen.unity
     guid: 0595037ad86c78e4ea1da0dbb725b2f6
   - enabled: 1
     path: Assets/Scenes/Settings.unity
