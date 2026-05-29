@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Doctor-Swipe_REAL
+  m_Name: Doctor_Swipe
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,31 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
+      value: {fileID: -678121614, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - time: 0.09090909
-      value: {fileID: 1015963226, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.18181819
-      value: {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.27272728
-      value: {fileID: 1015963226, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.36363637
       value: {fileID: -1278978073, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.45454547
+    - time: 0.09090909
       value: {fileID: 160480727, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.54545456
+    - time: 0.18181819
       value: {fileID: -1190983703, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.6363636
+    - time: 0.27272728
       value: {fileID: 848841567, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.72727275
+    - time: 0.36363637
       value: {fileID: 386739619, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.8181818
+    - time: 0.45454547
       value: {fileID: 1198081685, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 0.90909094
+    - time: 0.54545456
       value: {fileID: 780220114, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 1
+    - time: 0.6363636
       value: {fileID: -1203268453, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - time: 1.0909091
-      value: {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -68,10 +60,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - {fileID: 1015963226, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - {fileID: 1015963226, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
+    - {fileID: -678121614, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: -1278978073, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: 160480727, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: -1190983703, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
@@ -80,13 +69,12 @@ AnimationClip:
     - {fileID: 1198081685, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: 780220114, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
     - {fileID: -1203268453, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
-    - {fileID: 1578245812, guid: f9f88d9989b9449428409ebae7f93c39, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1818182
+    m_StopTime: 0.72727275
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -107,16 +95,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: Spawn
+    functionName: SpawnSwipe
     data: 
-    objectReferenceParameter: {fileID: 2828592573755007353, guid: a48a9da0aa3421349b841fb4b7fa5468, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.0909091
-    functionName: Spawn
-    data: 
-    objectReferenceParameter: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
-    floatParameter: 0
-    intParameter: 0
+    intParameter: 2
     messageOptions: 0

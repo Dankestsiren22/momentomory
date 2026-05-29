@@ -1,29 +1,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Leech_Boss : MonoBehaviour, IDamageable
+public class Docotr_Boss : MonoBehaviour, IDamageable
 {
-    public enum LeechStates
+    public enum DoctorStates
     {
         Idle,
         Choosing,
         Attacking
     }
-    public enum LeechAttacks
+    public enum DoctorAttacks
     {
         DoubleSwipe = 1,
         SwipeStraight = 2,
+        SwipeReverse = 3,
     }
     [System.Serializable]
     public class WeightedAttack
     {
-        public LeechAttacks attack;
+        public DoctorAttacks attack;
         [Header("Starting Chance")]
         public int baseWeight = 50;
         [HideInInspector]
         public int currentWeight;
     }
-
     public HealthBar healthBar { get; private set; }
     public GameObject Parry_Box { get; private set; }
     public int MaxHealth { get; private set; } = 10;
@@ -51,20 +51,21 @@ public class Leech_Boss : MonoBehaviour, IDamageable
     public Animator animator;
     public float attackCooldown = 3f;
     private float cooldownTimer;
-    public LeechStates currentState;
-    private LeechAttacks chosenAttack;
+    public DoctorStates currentState;
+    private DoctorAttacks chosenAttack;
     public GameObject SwipePrefab;
     public GameObject StraightPrefab;
+    public GameObject ReversePrefab;
     public Transform Player;
     [Header("Weighted Attacks")]
     public List<WeightedAttack> attacks = new List<WeightedAttack>()
     {
-        new WeightedAttack { attack = LeechAttacks.DoubleSwipe, baseWeight = 70 },
-        new WeightedAttack { attack = LeechAttacks.SwipeStraight, baseWeight = 20 },
+        new WeightedAttack { attack = DoctorAttacks.DoubleSwipe, baseWeight = 70 },
+        new WeightedAttack { attack = DoctorAttacks.SwipeStraight, baseWeight = 20 },
     };
     void Start()
     {
-        currentState = LeechStates.Idle;
+        currentState = DoctorStates.Idle;
         cooldownTimer = attackCooldown;
         foreach (WeightedAttack attack in attacks)
         {
@@ -76,16 +77,16 @@ public class Leech_Boss : MonoBehaviour, IDamageable
     {
         switch (currentState)
         {
-            case LeechStates.Idle:
+            case DoctorStates.Idle:
 
                 HandleIdle();
                 break;
 
-            case LeechStates.Choosing:
+            case DoctorStates.Choosing:
                 ChooseAttack();
                 break;
 
-            case LeechStates.Attacking:
+            case DoctorStates.Attacking:
                 PerformAttack();
                 break;
         }
@@ -96,22 +97,22 @@ public class Leech_Boss : MonoBehaviour, IDamageable
 
         if (cooldownTimer <= 0f)
         {
-            ChangeState(LeechStates.Choosing);
+            ChangeState(DoctorStates.Choosing);
         }
     }
     void ChooseAttack()
     {
         chosenAttack = GetWeightedAttack();
         Debug.Log("Chosen Attack: " + chosenAttack);
-        ChangeState(LeechStates.Attacking);
+        ChangeState(DoctorStates.Attacking);
     }
     void PerformAttack()
     {
         animator.SetInteger("Attack_Sequence", (int)chosenAttack);
         cooldownTimer = attackCooldown;
-        ChangeState(LeechStates.Idle);
+        ChangeState(DoctorStates.Idle);
     }
-    LeechAttacks GetWeightedAttack()
+    DoctorAttacks GetWeightedAttack()
     {
         int totalWeight = 0;
         foreach (WeightedAttack attack in attacks)
@@ -140,9 +141,9 @@ public class Leech_Boss : MonoBehaviour, IDamageable
                 return attack.attack;
             }
         }
-        return LeechAttacks.DoubleSwipe;
+        return DoctorAttacks.DoubleSwipe;
     }
-    public void ChangeState(LeechStates newState)
+    public void ChangeState(DoctorStates newState)
     {
         currentState = newState;
     }
@@ -156,6 +157,10 @@ public class Leech_Boss : MonoBehaviour, IDamageable
         GameObject p = Instantiate(StraightPrefab);
         BossParryAttackHitbox attack = p.GetComponent<BossParryAttackHitbox>();
         attack.boss = this;
+    }
+    public void SpawnReverse()
+    {
+        Instantiate(ReversePrefab);
     }
     public void Die()
     {

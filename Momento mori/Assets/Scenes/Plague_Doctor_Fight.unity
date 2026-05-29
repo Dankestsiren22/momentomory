@@ -681,52 +681,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732826980}
   m_CullTransparentMesh: 1
---- !u!1 &854687710
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 854687712}
-  - component: {fileID: 854687711}
-  m_Layer: 0
-  m_Name: DeathDetecor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &854687711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854687710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c26bc4f64837f84b9ba2b975179835d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boss: {fileID: 0}
-  Level: 9
---- !u!4 &854687712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854687710}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919054426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,21 +1913,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068136718}
   m_CullTransparentMesh: 1
---- !u!4 &323008002925785676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754527159841836934}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.06981, y: 0, z: 9.62506}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &721315160796996777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2031,23 +1970,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f20377084677f94eb2290c95a9a2978, type: 3}
---- !u!1 &754527159841836934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 323008002925785676}
-  - component: {fileID: 5853654047715985638}
-  m_Layer: 0
-  m_Name: UiManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!95 &834654149369527896
 Animator:
   serializedVersion: 7
@@ -2354,6 +2276,8 @@ GameObject:
   - component: {fileID: 2872097820863485430}
   - component: {fileID: 2564903181555877650}
   - component: {fileID: 1337739212578544758}
+  - component: {fileID: 4308781079823576714}
+  - component: {fileID: 4308781079823576713}
   m_Layer: 0
   m_Name: Plague Doctor
   m_TagString: Untagged
@@ -2361,6 +2285,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4308781079823576713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308781079823576712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bec3219ff33984089228fa7c3a9a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2564903181555877650}
+  attackCooldown: 3
+  currentState: 0
+  SwipePrefab: {fileID: 5520163964098279471, guid: f9ba9536a21d6534794555909d513016, type: 3}
+  StraightPrefab: {fileID: 857249797956302098, guid: c23cdc941f01fe747ba380f5d99068c1, type: 3}
+  ReversePrefab: {fileID: 7349025973841441243, guid: e688248263ec8ac40943212113afd669, type: 3}
+  Player: {fileID: 5274159625350127966}
+  attacks:
+  - attack: 1
+    baseWeight: 70
+    currentWeight: 0
+  - attack: 2
+    baseWeight: 30
+    currentWeight: 0
+  - attack: 3
+    baseWeight: 50
+    currentWeight: 0
+--- !u!114 &4308781079823576714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308781079823576712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61bba733dde1b24f95b54f962f7520e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fill: {fileID: 1092897750}
 --- !u!1 &4535908173868830926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,6 +2357,7 @@ GameObject:
   - component: {fileID: 834654149369527896}
   - component: {fileID: 2745502466495839036}
   - component: {fileID: 3463055422050008597}
+  - component: {fileID: 9187615307074164638}
   - component: {fileID: 9187615307074164637}
   m_Layer: 0
   m_Name: player (combat)
@@ -2469,22 +2436,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5853654047715985638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754527159841836934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce2ddd23f9a7aee4f8e2a425b903bf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHp: {fileID: 0}
-  BossHp: {fileID: 0}
-  Boss: {fileID: 0}
-  Player: {fileID: 9187615307074164637}
 --- !u!1 &6043847213765128894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,9 +2710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd563ff87d04e5a49902f9a5337829f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 0}
-  MaxHealth: 10
-  Health: 10
+  PauseMenu: {fileID: 640861706}
   Speed: 15
   UD_Movement: 0
   LR_Movement: 0
@@ -2769,6 +2718,19 @@ MonoBehaviour:
   parryWindow: 0.5
   parrycooldown: 0
   IsPaused: 0
+--- !u!114 &9187615307074164638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213934358659945100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61bba733dde1b24f95b54f962f7520e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fill: {fileID: 732826982}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2780,8 +2742,6 @@ SceneRoots:
   - {fileID: 919054429}
   - {fileID: 233584928}
   - {fileID: 1983626958}
-  - {fileID: 854687712}
   - {fileID: 721315160796996777}
   - {fileID: 1175613201}
-  - {fileID: 323008002925785676}
   - {fileID: 1720846288}

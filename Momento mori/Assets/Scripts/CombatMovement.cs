@@ -25,7 +25,9 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable
     }
     public void Die()
     {
-
+        SceneManager.LoadScene(7);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public bool IsParrying { get; private set; }
@@ -64,6 +66,8 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable
     private void Start()
     {
         healthBar = GetComponent<HealthBar>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void Awake()
     {
@@ -86,8 +90,6 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable
         controls.Player.ParrySelect.started += _ => parry();
 
         PauseMenu.enabled = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
     void FixedUpdate()
     {
@@ -100,6 +102,7 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable
     {
         if (CanParry == true)
         {
+            animator.SetTrigger("Parry");
             CanParry = false;
             IsParrying = true;
             StartCoroutine(ParryCooldown());
