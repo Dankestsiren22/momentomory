@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3124710334038079705}
   - component: {fileID: 7608609011618746576}
   - component: {fileID: 4493214629838761924}
-  - component: {fileID: 1750047998453009850}
+  - component: {fileID: 2877156758213914734}
   m_Layer: 0
   m_Name: Straight
   m_TagString: ParryableAttack
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Size: {x: 16.49, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4493214629838761924
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 16.49, y: 20.48}
   m_EdgeRadius: 0
---- !u!114 &1750047998453009850
+--- !u!114 &2877156758213914734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,11 +144,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 857249797956302098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c2d840f19c34c4a8ebb3794d236db8, type: 3}
+  m_Script: {fileID: 11500000, guid: c966c8efc73555a429d47a2d4d353dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 0.5
-  position: {x: -1.23, y: -8.28, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
-  parried: 0
-  enemy: {fileID: 0}
+  spriteRenderer: {fileID: 7608609011618746576}
+  warningSprite: {fileID: 21300000, guid: 233b55bb76676c049bed595ef0c69967, type: 3}
+  attackSprite: {fileID: 21300000, guid: 55fd6ed11bb21f44e837f02d6e4cb0f6, type: 3}
+  hitboxCollider: {fileID: 4493214629838761924}
+  warningTime: 0.5
+  activeTime: 0.2
+  Damage: 1

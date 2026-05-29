@@ -2,15 +2,49 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class CombatMovement : MonoBehaviour
+public class CombatMovement : MonoBehaviour, IDamageable, IParryable
 {
+    public HealthBar healthBar { get; private set; }
+    public int MaxHealth { get; private set; } = 10;
+    public int CurrentHealth { get; private set; } = 10;
+
+    public void Damage(int amount)
+    {
+        CurrentHealth -= amount;
+        if (CurrentHealth <= 0)
+        {
+            Debug.Log("Boss Dead");
+        }
+        if (healthBar != null)
+            healthBar.SetHealth(CurrentHealth, MaxHealth);
+
+        if (CurrentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+
+    }
+
+    public bool IsParrying { get; private set; }
+
+    public void StartParry()
+    {
+        IsParrying = true;
+    }
+    void EndParry()
+    {
+        IsParrying = false;
+    }
+
     Rigidbody2D rb;
     Controls controls;
     Animator animator;
     public Canvas PauseMenu;
 
-    public int MaxHealth;
-    public int Health;
+    
     public int Speed;
 
     public float UD_Movement;
@@ -27,6 +61,10 @@ public class CombatMovement : MonoBehaviour
         controls.Disable();
     }
 
+    private void Start()
+    {
+        healthBar = GetComponent<HealthBar>();
+    }
     public void Awake()
     {
 
@@ -48,8 +86,8 @@ public class CombatMovement : MonoBehaviour
         controls.Player.ParrySelect.started += _ => parry();
 
         PauseMenu.enabled = false;
-       // //Cursor.visible = false;
-       // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void FixedUpdate()
     {
@@ -63,51 +101,15 @@ public class CombatMovement : MonoBehaviour
         if (CanParry == true)
         {
             CanParry = false;
-            transform.gameObject.tag = "ActiveParry";
-            StartCoroutine(ParryWindow());
+            IsParrying = true;
             StartCoroutine(ParryCooldown());
-            animator.SetTrigger("Parry");
-        }
-        
-    }
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (transform.gameObject.tag == "ActiveParry" & other.CompareTag("ParryableAttack"))
-        {
-
-            CanParry = true;
-            transform.gameObject.tag = "Player";
-        }
-        else if (other.tag == "ParryableAttack")
-        {
-            Health = Health - 2;
-        }
-        else if (other.tag == "Unparryable")
-        {
-            Health--; 
         }
     }
-
-    IEnumerator ParryWindow()
-    {
-        yield return new WaitForSeconds(parryWindow);
-        gameObject.tag = "Player";
-    }
+    
     IEnumerator ParryCooldown()
     {
         yield return new WaitForSeconds(parrycooldown);
         CanParry = true;
-    }
-
-
-    private void Update()
-    {
-        if (Health == 0)
-        {
-            SceneManager.LoadScene(7);
-        }
-
-
     }
 
     public void pause()

@@ -101,14 +101,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 376
+        y: 148
         width: 2048
-        height: 1366
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1645
+      alignment: 9
+      pivot: {x: 0.6705425, y: 0.3403949}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline: []
+      outline:
+      - - {x: -1024, y: -577.63544}
+        - {x: 1024, y: -561.24426}
+        - {x: 1024, y: 746.5039}
+        - {x: -1016, y: 68}
       physicsShape: []
       tessellationDetail: 0
       bones: []

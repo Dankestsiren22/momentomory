@@ -2,6 +2,9 @@ using UnityEngine;
 
 public interface IDamageable
 {
-    int Health { get; }
+    HealthBar healthBar { get; }
+    int MaxHealth { get; }
+    int CurrentHealth { get; }
     void Damage(int Amount);
+    void Die();
 }

@@ -1,91 +1,162 @@
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-
 public enum LeechStates
 {
     Idle,
-    choosing,
-    attacking,
-
-
-
+    Choosing,
+    Attacking
 }
-public class Leech_Boss : MonoBehaviour, IDamageable, IParryable
+public enum BossAttack
 {
+    DoubleSwipe = 1,
+    SwipeStraight = 2,
+}
+[System.Serializable]
+public class WeightedAttack
+{
+    public BossAttack attack;
+    [Header("Starting Chance")]
+    public int baseWeight = 50;
+    [HideInInspector]
+    public int currentWeight;
+}
+public class Leech_Boss : MonoBehaviour, IDamageable
+{
+    public HealthBar healthBar { get; private set; }
     public GameObject Parry_Box { get; private set; }
-    public int Health { get; private set; } = 1;
+    public int MaxHealth { get; private set; } = 10;
+    public int CurrentHealth { get; private set; } = 10;
     public void Damage(int amount)
     {
-        Health = -amount;
+        CurrentHealth -= amount;
+        if (CurrentHealth <= 0)
+        {
+            Debug.Log("Boss Dead");
+        }
+        if (healthBar != null)
+            healthBar.SetHealth(CurrentHealth, MaxHealth);
+
+        if (CurrentHealth <= 0)
+        {
+            Die();
+        }
     }
     public void Parried()
     {
         Damage(1);
     }
-
-
+    [Header("Boss Settings")]
     public Animator animator;
-    public float Cooldown;
-    public int Chosen_Attack = 0;
-    private int Starting_Wait = 1;
+    public float attackCooldown = 3f;
+    private float cooldownTimer;
     public LeechStates currentState;
-    public int Attacked;
-    public void Start()
+    private BossAttack chosenAttack;
+    public GameObject SwipePrefab;
+    public GameObject StraightPrefab;
+    public Transform Player;
+    [Header("Weighted Attacks")]
+    public List<WeightedAttack> attacks = new List<WeightedAttack>()
+    {
+        new WeightedAttack { attack = BossAttack.DoubleSwipe, baseWeight = 70 },
+        new WeightedAttack { attack = BossAttack.SwipeStraight, baseWeight = 20 },
+    };
+    void Start()
     {
         currentState = LeechStates.Idle;
+        cooldownTimer = attackCooldown;
+        foreach (WeightedAttack attack in attacks)
+        {
+            attack.currentWeight = attack.baseWeight;
+        }
+        healthBar = GetComponent<HealthBar>();
     }
-    public void FixedUpdate()
+    void Update()
     {
-        switch(currentState)
+        switch (currentState)
         {
             case LeechStates.Idle:
-                StartCoroutine(CoolDown(1));
-                Chosen_Attack = 0;
-                animator.SetInteger("Attack_Sequence", Chosen_Attack);
-                if (Cooldown <= 0)
-                {
-                    ChangeState(LeechStates.choosing);
-                }
+
+                HandleIdle();
                 break;
-            case LeechStates.choosing:
-                Chosen_Attack = Random.Range(1, 2);
+
+            case LeechStates.Choosing:
+                ChooseAttack();
                 break;
-            case LeechStates.attacking:
-                animator.SetInteger("Attack_Sequence", Chosen_Attack);
-                StartCoroutine(ReturnToIdle());
-                break;
-            default:
-                StartCoroutine(CoolDown(1));
-                Chosen_Attack = 0;
-                animator.SetInteger("Attack_Sequence", Chosen_Attack);
+
+            case LeechStates.Attacking:
+                PerformAttack();
                 break;
         }
     }
+    void HandleIdle()
+    {
+        cooldownTimer -= Time.deltaTime;
 
-    public void Choose_Attack()
-    {
-        Chosen_Attack = Random.Range(1, 2);
-        animator.SetInteger("Attack_Sequence", Chosen_Attack);
-        StartCoroutine(ReturnToIdle());
+        if (cooldownTimer <= 0f)
+        {
+            ChangeState(LeechStates.Choosing);
+        }
     }
-    IEnumerator ReturnToIdle()
+    void ChooseAttack()
     {
-        yield return new WaitForSeconds(1);
-        Chosen_Attack = 0;
-        animator.SetInteger("Attack_Sequence", Chosen_Attack);
+        chosenAttack = GetWeightedAttack();
+        Debug.Log("Chosen Attack: " + chosenAttack);
+        ChangeState(LeechStates.Attacking);
     }
-    IEnumerator CoolDown(float x)
+    void PerformAttack()
     {
-        yield return new WaitForSeconds(x);
-        Cooldown = 0;
+        animator.SetInteger("Attack_Sequence", (int)chosenAttack);
+        cooldownTimer = attackCooldown;
+        ChangeState(LeechStates.Idle);
     }
-    public void ChangeState(LeechStates NewState)
+    BossAttack GetWeightedAttack()
     {
-        currentState = NewState;
+        int totalWeight = 0;
+        foreach (WeightedAttack attack in attacks)
+        {
+            totalWeight += attack.currentWeight;
+        }
+        int randomNumber = Random.Range(0, totalWeight);
+        int currentWeight = 0;
+        foreach (WeightedAttack attack in attacks)
+        {
+            currentWeight += attack.currentWeight;
+            if (randomNumber < currentWeight)
+            {
+                attack.currentWeight = Mathf.Max(1, attack.currentWeight / 2);
+                foreach (WeightedAttack otherAttack in attacks)
+                {
+                    if (otherAttack != attack)
+                    {
+                        otherAttack.currentWeight += 5;
+                        if (otherAttack.currentWeight > otherAttack.baseWeight)
+                        {
+                            otherAttack.currentWeight = otherAttack.baseWeight;
+                        }
+                    }
+                }
+                return attack.attack;
+            }
+        }
+        return BossAttack.DoubleSwipe;
     }
-    public void attacked()
+    public void ChangeState(LeechStates newState)
     {
-        Attacked++;
+        currentState = newState;
+    }
+    public void SpawnSwipe()
+    {
+        Instantiate(SwipePrefab, Player.position, Quaternion.identity);
+    }
+    public void SpawnStraight()
+    {
+        Debug.Log("CalledStraight");
+        GameObject p = Instantiate(StraightPrefab, Player.position, Quaternion.identity);
+        BossParryAttackHitbox attack = p.GetComponent<BossParryAttackHitbox>();
+        attack.boss = this;
+    }
+    public void Die()
+    {
+
     }
 }
