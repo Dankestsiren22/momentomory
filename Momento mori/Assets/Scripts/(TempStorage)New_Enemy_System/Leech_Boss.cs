@@ -1,8 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Leech_Boss : MonoBehaviour, IDamageable
+public class Leech_Boss : MonoBehaviour, IDamageable, IDialog
 {
+    [SerializeField] private bool inDialog;
+
+    public bool InDialog
+    {
+        get { return inDialog; }
+        set { inDialog = value; }
+    }
     public enum LeechStates
     {
         Idle,
@@ -74,20 +81,23 @@ public class Leech_Boss : MonoBehaviour, IDamageable
     }
     void Update()
     {
-        switch (currentState)
+        if(InDialog == false)
         {
-            case LeechStates.Idle:
+            switch (currentState)
+            {
+                case LeechStates.Idle:
 
-                HandleIdle();
-                break;
+                    HandleIdle();
+                    break;
 
-            case LeechStates.Choosing:
-                ChooseAttack();
-                break;
+                case LeechStates.Choosing:
+                    ChooseAttack();
+                    break;
 
-            case LeechStates.Attacking:
-                PerformAttack();
-                break;
+                case LeechStates.Attacking:
+                    PerformAttack();
+                    break;
+            }
         }
     }
     void HandleIdle()

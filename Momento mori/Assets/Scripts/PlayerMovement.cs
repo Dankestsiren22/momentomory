@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!IsPaused)
         {
-            //transform.Rotate(0f, (RotateSpeed * Rotation), 0f);
 
             Vector3 moveDirection = (transform.forward * FBmovment + transform.right * UDmovment) * speed;
 

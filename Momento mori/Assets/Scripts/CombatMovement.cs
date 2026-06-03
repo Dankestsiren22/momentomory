@@ -2,8 +2,15 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class CombatMovement : MonoBehaviour, IDamageable, IParryable
+public class CombatMovement : MonoBehaviour, IDamageable, IParryable, IDialog
 {
+    [SerializeField] private bool inDialog;
+
+    public bool InDialog
+    {
+        get { return inDialog; }
+        set { inDialog = value; }
+    }
     public HealthBar healthBar { get; private set; }
     public int MaxHealth { get; private set; } = 10;
     public int CurrentHealth { get; private set; } = 10;
@@ -93,10 +100,13 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable
     }
     void FixedUpdate()
     {
-        Vector2 input = new Vector2(LR_Movement, UD_Movement); 
-        if (input.sqrMagnitude > 1)
-            input = input.normalized;
-        rb.linearVelocity = input * Speed;
+        if (InDialog == false)
+        {
+            Vector2 input = new Vector2(LR_Movement, UD_Movement);
+            if (input.sqrMagnitude > 1)
+                input = input.normalized;
+            rb.linearVelocity = input * Speed;
+        }
     }
     public void parry()
     {
