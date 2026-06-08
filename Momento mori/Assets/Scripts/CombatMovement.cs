@@ -73,8 +73,8 @@ public class CombatMovement : MonoBehaviour, IDamageable, IParryable, IDialog
     private void Start()
     {
         healthBar = GetComponent<HealthBar>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     public void Awake()
     {
